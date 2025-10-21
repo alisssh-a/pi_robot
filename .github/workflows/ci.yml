@@ -11,14 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Java
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-
-      - name: Build with Maven
-        run: mvn clean compile
-
-      - name: Run tests
-        run: mvn test
+      - name: Build and test
+        run: mvn clean test
