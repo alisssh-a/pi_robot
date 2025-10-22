@@ -1,0 +1,759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Роботы: Класс gui.WindowManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Роботы<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Приложение для симуляции движения робота</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="namespacegui.html">gui</a></li><li class="navelem"><a href="classgui_1_1_window_manager.html">WindowManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="#pri-static-attribs">Закрытые статические данные</a> &#124;
+<a href="classgui_1_1_window_manager-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс gui.WindowManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс-менеджер управления окнами приложения  
+ <a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ae154180cd85a2bafeec6dcb5b31239f2" id="r_ae154180cd85a2bafeec6dcb5b31239f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae154180cd85a2bafeec6dcb5b31239f2">WindowManager</a> (JDesktopPane <a class="el" href="#a690a04fb4d94e87bf02c9537a04c6773">desktopPane</a>, <a class="el" href="classmodel_1_1_robot_model.html">RobotModel</a> <a class="el" href="#ab676dd76cc2bb430b646f5a2537296ef">robotModel</a>)</td></tr>
+<tr class="memdesc:ae154180cd85a2bafeec6dcb5b31239f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор менеджера окон  <br /></td></tr>
+<tr class="memitem:a0983a0241708f49997713b53864a41e2" id="r_a0983a0241708f49997713b53864a41e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0983a0241708f49997713b53864a41e2">initializeWindows</a> ()</td></tr>
+<tr class="memdesc:a0983a0241708f49997713b53864a41e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация окон приложения  <br /></td></tr>
+<tr class="memitem:a18b2b95451776249778d9aae36e065fe" id="r_a18b2b95451776249778d9aae36e065fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18b2b95451776249778d9aae36e065fe">addWindow</a> (JInternalFrame frame)</td></tr>
+<tr class="memdesc:a18b2b95451776249778d9aae36e065fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление окна на панель  <br /></td></tr>
+<tr class="memitem:af88b03ca4d0cef3daca050b52415358c" id="r_af88b03ca4d0cef3daca050b52415358c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af88b03ca4d0cef3daca050b52415358c">saveWindowState</a> (JFrame frame)</td></tr>
+<tr class="memdesc:af88b03ca4d0cef3daca050b52415358c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохранение состояния главного окна  <br /></td></tr>
+<tr class="memitem:a3ce6d0666657813680f694001f0ccc2c" id="r_a3ce6d0666657813680f694001f0ccc2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ce6d0666657813680f694001f0ccc2c">loadWindowState</a> (JFrame frame)</td></tr>
+<tr class="memdesc:a3ce6d0666657813680f694001f0ccc2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка состояния главного окна  <br /></td></tr>
+<tr class="memitem:a18ed69d29caf0a772db9d3767a8ab05e" id="r_a18ed69d29caf0a772db9d3767a8ab05e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18ed69d29caf0a772db9d3767a8ab05e">saveLocale</a> (String language)</td></tr>
+<tr class="memdesc:a18ed69d29caf0a772db9d3767a8ab05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохранение текущей локали  <br /></td></tr>
+<tr class="memitem:ab4425f5aa923b0ae2a3f31eb7d00211b" id="r_ab4425f5aa923b0ae2a3f31eb7d00211b"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4425f5aa923b0ae2a3f31eb7d00211b">loadLocale</a> ()</td></tr>
+<tr class="memdesc:ab4425f5aa923b0ae2a3f31eb7d00211b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка сохранённой локали  <br /></td></tr>
+<tr class="memitem:aa569f7065b80ab1800ab2929a2680559" id="r_aa569f7065b80ab1800ab2929a2680559"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa569f7065b80ab1800ab2929a2680559">shutdown</a> ()</td></tr>
+<tr class="memdesc:aa569f7065b80ab1800ab2929a2680559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершение работы приложения  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:af8f88195682671f698ce9b6bb8f2d402" id="r_af8f88195682671f698ce9b6bb8f2d402"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8f88195682671f698ce9b6bb8f2d402">saveInternalFrameState</a> (JInternalFrame frame, String name, Properties props)</td></tr>
+<tr class="memdesc:af8f88195682671f698ce9b6bb8f2d402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохранение состояния внутреннего окна  <br /></td></tr>
+<tr class="memitem:a122291f9ac0f466c8c1f75cd47c30512" id="r_a122291f9ac0f466c8c1f75cd47c30512"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a122291f9ac0f466c8c1f75cd47c30512">loadInternalFrameState</a> (JInternalFrame frame, String name, Properties props)</td></tr>
+<tr class="memdesc:a122291f9ac0f466c8c1f75cd47c30512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка состояния внутреннего окна  <br /></td></tr>
+<tr class="memitem:a6d75b76a614947ca05e5abb29c27e386" id="r_a6d75b76a614947ca05e5abb29c27e386"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d75b76a614947ca05e5abb29c27e386">centerWindow</a> (JFrame frame)</td></tr>
+<tr class="memdesc:a6d75b76a614947ca05e5abb29c27e386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Центрирование главного окна  <br /></td></tr>
+<tr class="memitem:a94caf78f8bd44a2e4da0d1e6070038e2" id="r_a94caf78f8bd44a2e4da0d1e6070038e2"><td class="memItemLeft" align="right" valign="top">Properties&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94caf78f8bd44a2e4da0d1e6070038e2">loadProperties</a> ()</td></tr>
+<tr class="memdesc:a94caf78f8bd44a2e4da0d1e6070038e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка свойств из файла конфигурации  <br /></td></tr>
+<tr class="memitem:aae02434405f2c7a96c13719769404312" id="r_aae02434405f2c7a96c13719769404312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae02434405f2c7a96c13719769404312">saveProperties</a> (Properties props)</td></tr>
+<tr class="memdesc:aae02434405f2c7a96c13719769404312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохранение свойств в файл конфигурации  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a690a04fb4d94e87bf02c9537a04c6773" id="r_a690a04fb4d94e87bf02c9537a04c6773"><td class="memItemLeft" align="right" valign="top">final JDesktopPane&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a690a04fb4d94e87bf02c9537a04c6773">desktopPane</a></td></tr>
+<tr class="memitem:ab676dd76cc2bb430b646f5a2537296ef" id="r_ab676dd76cc2bb430b646f5a2537296ef"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classmodel_1_1_robot_model.html">RobotModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab676dd76cc2bb430b646f5a2537296ef">robotModel</a></td></tr>
+<tr class="memitem:a54e9c4cd9005836fdb28c645b7fa9b0c" id="r_a54e9c4cd9005836fdb28c645b7fa9b0c"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classgui_1_1_localization_manager.html">LocalizationManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54e9c4cd9005836fdb28c645b7fa9b0c">localizationManager</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Закрытые статические данные</h2></td></tr>
+<tr class="memitem:a43f066465779165a998b503ff280f479" id="r_a43f066465779165a998b503ff280f479"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43f066465779165a998b503ff280f479">CONFIG_PATH</a> = System.getProperty(&quot;user.home&quot;) + &quot;/robots_config.properties&quot;</td></tr>
+<tr class="memitem:a7ab0cca07c132428ec57f3d250ad60c0" id="r_a7ab0cca07c132428ec57f3d250ad60c0"><td class="memItemLeft" align="right" valign="top">static final Dimension&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ab0cca07c132428ec57f3d250ad60c0">NORMAL_SIZE</a> = new Dimension(950, 850)</td></tr>
+<tr class="memitem:a9637e4e2fad6956f90ba5bf12ba9205a" id="r_a9637e4e2fad6956f90ba5bf12ba9205a"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9637e4e2fad6956f90ba5bf12ba9205a">LOCALE_KEY</a> = &quot;locale&quot;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс-менеджер управления окнами приложения </p>
+<p>Управляет созданием, позиционированием и сохранением состояния окон, а также обработкой локализации и конфигурации приложения. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00016">16</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="ae154180cd85a2bafeec6dcb5b31239f2" name="ae154180cd85a2bafeec6dcb5b31239f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae154180cd85a2bafeec6dcb5b31239f2">&#9670;&#160;</a></span>WindowManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gui.WindowManager.WindowManager </td>
+          <td>(</td>
+          <td class="paramtype">JDesktopPane</td>          <td class="paramname"><span class="paramname"><em>desktopPane</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmodel_1_1_robot_model.html">RobotModel</a></td>          <td class="paramname"><span class="paramname"><em>robotModel</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор менеджера окон </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">desktopPane</td><td>Панель для размещения внутренних окон </td></tr>
+    <tr><td class="paramname">robotModel</td><td>Модель данных робота</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Инициализирует менеджер с заданной панелью и моделью </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00031">31</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_window_manager_8java_source.html#l00018">desktopPane</a>, <a class="el" href="_localization_manager_8java_source.html#l00050">gui.LocalizationManager.getInstance()</a> и <a class="el" href="_window_manager_8java_source.html#l00019">robotModel</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a18b2b95451776249778d9aae36e065fe" name="a18b2b95451776249778d9aae36e065fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b2b95451776249778d9aae36e065fe">&#9670;&#160;</a></span>addWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui.WindowManager.addWindow </td>
+          <td>(</td>
+          <td class="paramtype">JInternalFrame</td>          <td class="paramname"><span class="paramname"><em>frame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавление окна на панель </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>Окно для добавления</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Добавляет окно на панель и делает его видимым </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00068">68</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_window_manager_8java_source.html#l00018">desktopPane</a>, <a class="el" href="_logger_8java_source.html#l00026">log.Logger.error()</a> и <a class="el" href="_window_manager_8java_source.html#l00022">localizationManager</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00041">initializeWindows()</a>.</p>
+
+</div>
+</div>
+<a id="a6d75b76a614947ca05e5abb29c27e386" name="a6d75b76a614947ca05e5abb29c27e386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d75b76a614947ca05e5abb29c27e386">&#9670;&#160;</a></span>centerWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui.WindowManager.centerWindow </td>
+          <td>(</td>
+          <td class="paramtype">JFrame</td>          <td class="paramname"><span class="paramname"><em>frame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Центрирование главного окна </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>Главное окно приложения</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Располагает окно по центру экрана </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00226">226</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_logger_8java_source.html#l00014">log.Logger.debug()</a> и <a class="el" href="_window_manager_8java_source.html#l00022">localizationManager</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00123">loadWindowState()</a>.</p>
+
+</div>
+</div>
+<a id="a0983a0241708f49997713b53864a41e2" name="a0983a0241708f49997713b53864a41e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0983a0241708f49997713b53864a41e2">&#9670;&#160;</a></span>initializeWindows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui.WindowManager.initializeWindows </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициализация окон приложения </p>
+<p>Создаёт и размещает основные окна (лог, игровое поле, координаты) </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00041">41</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_window_manager_8java_source.html#l00068">addWindow()</a>, <a class="el" href="_window_manager_8java_source.html#l00018">desktopPane</a>, <a class="el" href="_logger_8java_source.html#l00034">log.Logger.getDefaultLogSource()</a>, <a class="el" href="_window_manager_8java_source.html#l00022">localizationManager</a> и <a class="el" href="_window_manager_8java_source.html#l00019">robotModel</a>.</p>
+
+</div>
+</div>
+<a id="a122291f9ac0f466c8c1f75cd47c30512" name="a122291f9ac0f466c8c1f75cd47c30512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a122291f9ac0f466c8c1f75cd47c30512">&#9670;&#160;</a></span>loadInternalFrameState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui.WindowManager.loadInternalFrameState </td>
+          <td>(</td>
+          <td class="paramtype">JInternalFrame</td>          <td class="paramname"><span class="paramname"><em>frame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Properties</td>          <td class="paramname"><span class="paramname"><em>props</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Загрузка состояния внутреннего окна </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>Внутреннее окно </td></tr>
+    <tr><td class="paramname">name</td><td>Ключ для идентификации окна </td></tr>
+    <tr><td class="paramname">props</td><td>Объект свойств для загрузки</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Восстанавливает координаты, размер и состояние минимизации окна </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00206">206</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_logger_8java_source.html#l00026">log.Logger.error()</a> и <a class="el" href="_window_manager_8java_source.html#l00022">localizationManager</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00123">loadWindowState()</a>.</p>
+
+</div>
+</div>
+<a id="ab4425f5aa923b0ae2a3f31eb7d00211b" name="ab4425f5aa923b0ae2a3f31eb7d00211b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4425f5aa923b0ae2a3f31eb7d00211b">&#9670;&#160;</a></span>loadLocale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String gui.WindowManager.loadLocale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузка сохранённой локали </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Код языка или null, если локаль не найдена</dd></dl>
+<p>Читает сохранённый язык из файла конфигурации </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00286">286</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_window_manager_8java_source.html#l00239">loadProperties()</a> и <a class="el" href="_window_manager_8java_source.html#l00023">LOCALE_KEY</a>.</p>
+
+</div>
+</div>
+<a id="a94caf78f8bd44a2e4da0d1e6070038e2" name="a94caf78f8bd44a2e4da0d1e6070038e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94caf78f8bd44a2e4da0d1e6070038e2">&#9670;&#160;</a></span>loadProperties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Properties gui.WindowManager.loadProperties </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Загрузка свойств из файла конфигурации </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Объект Properties с загруженными данными</dd></dl>
+<p>Читает существующие настройки из файла, если он существует </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00239">239</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_window_manager_8java_source.html#l00020">CONFIG_PATH</a>, <a class="el" href="_logger_8java_source.html#l00026">log.Logger.error()</a> и <a class="el" href="_window_manager_8java_source.html#l00022">localizationManager</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00286">loadLocale()</a>, <a class="el" href="_window_manager_8java_source.html#l00123">loadWindowState()</a>, <a class="el" href="_window_manager_8java_source.html#l00275">saveLocale()</a> и <a class="el" href="_window_manager_8java_source.html#l00085">saveWindowState()</a>.</p>
+
+</div>
+</div>
+<a id="a3ce6d0666657813680f694001f0ccc2c" name="a3ce6d0666657813680f694001f0ccc2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce6d0666657813680f694001f0ccc2c">&#9670;&#160;</a></span>loadWindowState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui.WindowManager.loadWindowState </td>
+          <td>(</td>
+          <td class="paramtype">JFrame</td>          <td class="paramname"><span class="paramname"><em>frame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузка состояния главного окна </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>Главное окно приложения</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Загружает сохранённое состояние окна из файла конфигурации </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00123">123</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_window_manager_8java_source.html#l00226">centerWindow()</a>, <a class="el" href="_window_manager_8java_source.html#l00020">CONFIG_PATH</a>, <a class="el" href="_logger_8java_source.html#l00014">log.Logger.debug()</a>, <a class="el" href="_window_manager_8java_source.html#l00018">desktopPane</a>, <a class="el" href="_logger_8java_source.html#l00026">log.Logger.error()</a>, <a class="el" href="_window_manager_8java_source.html#l00206">loadInternalFrameState()</a>, <a class="el" href="_window_manager_8java_source.html#l00239">loadProperties()</a>, <a class="el" href="_window_manager_8java_source.html#l00022">localizationManager</a>, <a class="el" href="_window_manager_8java_source.html#l00021">NORMAL_SIZE</a> и <a class="el" href="_window_manager_8java_source.html#l00085">saveWindowState()</a>.</p>
+
+</div>
+</div>
+<a id="af8f88195682671f698ce9b6bb8f2d402" name="af8f88195682671f698ce9b6bb8f2d402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8f88195682671f698ce9b6bb8f2d402">&#9670;&#160;</a></span>saveInternalFrameState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui.WindowManager.saveInternalFrameState </td>
+          <td>(</td>
+          <td class="paramtype">JInternalFrame</td>          <td class="paramname"><span class="paramname"><em>frame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Properties</td>          <td class="paramname"><span class="paramname"><em>props</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сохранение состояния внутреннего окна </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>Внутреннее окно </td></tr>
+    <tr><td class="paramname">name</td><td>Ключ для идентификации окна </td></tr>
+    <tr><td class="paramname">props</td><td>Объект свойств для сохранения</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Сохраняет координаты, размер и состояние минимизации окна </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00191">191</a></p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00085">saveWindowState()</a>.</p>
+
+</div>
+</div>
+<a id="a18ed69d29caf0a772db9d3767a8ab05e" name="a18ed69d29caf0a772db9d3767a8ab05e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ed69d29caf0a772db9d3767a8ab05e">&#9670;&#160;</a></span>saveLocale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui.WindowManager.saveLocale </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>language</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сохранение текущей локали </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td>Код языка (например, "ru" или "en")</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Сохраняет выбранный язык в файл конфигурации </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00275">275</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_window_manager_8java_source.html#l00239">loadProperties()</a>, <a class="el" href="_window_manager_8java_source.html#l00023">LOCALE_KEY</a> и <a class="el" href="_window_manager_8java_source.html#l00257">saveProperties()</a>.</p>
+
+</div>
+</div>
+<a id="aae02434405f2c7a96c13719769404312" name="aae02434405f2c7a96c13719769404312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae02434405f2c7a96c13719769404312">&#9670;&#160;</a></span>saveProperties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui.WindowManager.saveProperties </td>
+          <td>(</td>
+          <td class="paramtype">Properties</td>          <td class="paramname"><span class="paramname"><em>props</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сохранение свойств в файл конфигурации </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">props</td><td>Объект свойств для сохранения</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Записывает свойства в файл с комментарием о конфигурации </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00257">257</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_window_manager_8java_source.html#l00020">CONFIG_PATH</a>, <a class="el" href="_logger_8java_source.html#l00014">log.Logger.debug()</a>, <a class="el" href="_logger_8java_source.html#l00026">log.Logger.error()</a> и <a class="el" href="_window_manager_8java_source.html#l00022">localizationManager</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00275">saveLocale()</a> и <a class="el" href="_window_manager_8java_source.html#l00085">saveWindowState()</a>.</p>
+
+</div>
+</div>
+<a id="af88b03ca4d0cef3daca050b52415358c" name="af88b03ca4d0cef3daca050b52415358c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88b03ca4d0cef3daca050b52415358c">&#9670;&#160;</a></span>saveWindowState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui.WindowManager.saveWindowState </td>
+          <td>(</td>
+          <td class="paramtype">JFrame</td>          <td class="paramname"><span class="paramname"><em>frame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сохранение состояния главного окна </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>Главное окно приложения</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Сохраняет состояние окна (размер, позицию) и текущую локаль в файл конфигурации </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00085">85</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_logger_8java_source.html#l00014">log.Logger.debug()</a>, <a class="el" href="_window_manager_8java_source.html#l00018">desktopPane</a>, <a class="el" href="_window_manager_8java_source.html#l00239">loadProperties()</a>, <a class="el" href="_window_manager_8java_source.html#l00023">LOCALE_KEY</a>, <a class="el" href="_window_manager_8java_source.html#l00022">localizationManager</a>, <a class="el" href="_window_manager_8java_source.html#l00021">NORMAL_SIZE</a>, <a class="el" href="_window_manager_8java_source.html#l00191">saveInternalFrameState()</a> и <a class="el" href="_window_manager_8java_source.html#l00257">saveProperties()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00123">loadWindowState()</a> и <a class="el" href="_window_manager_8java_source.html#l00296">shutdown()</a>.</p>
+
+</div>
+</div>
+<a id="aa569f7065b80ab1800ab2929a2680559" name="aa569f7065b80ab1800ab2929a2680559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa569f7065b80ab1800ab2929a2680559">&#9670;&#160;</a></span>shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui.WindowManager.shutdown </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Завершение работы приложения </p>
+<p>Сохраняет состояние окон и закрывает все внутренние окна </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00296">296</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_window_manager_8java_source.html#l00018">desktopPane</a>, <a class="el" href="_window_manager_8java_source.html#l00085">saveWindowState()</a> и <a class="el" href="_window_manager_8java_source.html#l00296">shutdown()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00296">shutdown()</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a43f066465779165a998b503ff280f479" name="a43f066465779165a998b503ff280f479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43f066465779165a998b503ff280f479">&#9670;&#160;</a></span>CONFIG_PATH</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String gui.WindowManager.CONFIG_PATH = System.getProperty(&quot;user.home&quot;) + &quot;/robots_config.properties&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00020">20</a></p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00239">loadProperties()</a>, <a class="el" href="_window_manager_8java_source.html#l00123">loadWindowState()</a> и <a class="el" href="_window_manager_8java_source.html#l00257">saveProperties()</a>.</p>
+
+</div>
+</div>
+<a id="a690a04fb4d94e87bf02c9537a04c6773" name="a690a04fb4d94e87bf02c9537a04c6773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a690a04fb4d94e87bf02c9537a04c6773">&#9670;&#160;</a></span>desktopPane</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final JDesktopPane gui.WindowManager.desktopPane</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00018">18</a></p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00068">addWindow()</a>, <a class="el" href="_window_manager_8java_source.html#l00041">initializeWindows()</a>, <a class="el" href="_window_manager_8java_source.html#l00123">loadWindowState()</a>, <a class="el" href="_window_manager_8java_source.html#l00085">saveWindowState()</a>, <a class="el" href="_window_manager_8java_source.html#l00296">shutdown()</a> и <a class="el" href="_window_manager_8java_source.html#l00031">WindowManager()</a>.</p>
+
+</div>
+</div>
+<a id="a9637e4e2fad6956f90ba5bf12ba9205a" name="a9637e4e2fad6956f90ba5bf12ba9205a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9637e4e2fad6956f90ba5bf12ba9205a">&#9670;&#160;</a></span>LOCALE_KEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String gui.WindowManager.LOCALE_KEY = &quot;locale&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00023">23</a></p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00286">loadLocale()</a>, <a class="el" href="_window_manager_8java_source.html#l00275">saveLocale()</a> и <a class="el" href="_window_manager_8java_source.html#l00085">saveWindowState()</a>.</p>
+
+</div>
+</div>
+<a id="a54e9c4cd9005836fdb28c645b7fa9b0c" name="a54e9c4cd9005836fdb28c645b7fa9b0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e9c4cd9005836fdb28c645b7fa9b0c">&#9670;&#160;</a></span>localizationManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classgui_1_1_localization_manager.html">LocalizationManager</a> gui.WindowManager.localizationManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00022">22</a></p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00068">addWindow()</a>, <a class="el" href="_window_manager_8java_source.html#l00226">centerWindow()</a>, <a class="el" href="_window_manager_8java_source.html#l00041">initializeWindows()</a>, <a class="el" href="_window_manager_8java_source.html#l00206">loadInternalFrameState()</a>, <a class="el" href="_window_manager_8java_source.html#l00239">loadProperties()</a>, <a class="el" href="_window_manager_8java_source.html#l00123">loadWindowState()</a>, <a class="el" href="_window_manager_8java_source.html#l00257">saveProperties()</a> и <a class="el" href="_window_manager_8java_source.html#l00085">saveWindowState()</a>.</p>
+
+</div>
+</div>
+<a id="a7ab0cca07c132428ec57f3d250ad60c0" name="a7ab0cca07c132428ec57f3d250ad60c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ab0cca07c132428ec57f3d250ad60c0">&#9670;&#160;</a></span>NORMAL_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Dimension gui.WindowManager.NORMAL_SIZE = new Dimension(950, 850)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00021">21</a></p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00123">loadWindowState()</a> и <a class="el" href="_window_manager_8java_source.html#l00085">saveWindowState()</a>.</p>
+
+</div>
+</div>
+<a id="ab676dd76cc2bb430b646f5a2537296ef" name="ab676dd76cc2bb430b646f5a2537296ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab676dd76cc2bb430b646f5a2537296ef">&#9670;&#160;</a></span>robotModel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classmodel_1_1_robot_model.html">RobotModel</a> gui.WindowManager.robotModel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_window_manager_8java_source.html">WindowManager.java</a> строка <a class="el" href="_window_manager_8java_source.html#l00019">19</a></p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00041">initializeWindows()</a> и <a class="el" href="_window_manager_8java_source.html#l00031">WindowManager()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>src/gui/<a class="el" href="_window_manager_8java_source.html">WindowManager.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Роботы. Последние изменения: <span class="timestamp"></span>. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

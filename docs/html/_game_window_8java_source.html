@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Роботы: Исходный файл src/gui/GameWindow.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Роботы<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Приложение для симуляции движения робота</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_99d0482cf009f9d97a0877749b817f19.html">gui</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">GameWindow.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_window_8java.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">package </span>gui;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> javax.swing.*;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.awt.*;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classgui_1_1_game_window.html">   11</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="classgui_1_1_game_window.html#a3d7c7f5bfcef22ef515853367549df55">GameWindow</a> <span class="keyword">extends</span> JInternalFrame {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classgui_1_1_game_window.html#a62d3136b9c4b2a523b7f182ebf97c715">   12</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="classgui_1_1_game_visualizer.html">GameVisualizer</a> <a class="code hl_variable" href="classgui_1_1_game_window.html#a62d3136b9c4b2a523b7f182ebf97c715">m_visualizer</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classgui_1_1_game_window.html#a733894d0274f060c30679ed85429ba04">   13</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="classgui_1_1_localization_manager.html">LocalizationManager</a> <a class="code hl_variable" href="classgui_1_1_game_window.html#a733894d0274f060c30679ed85429ba04">localizationManager</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classgui_1_1_game_window.html#a3d7c7f5bfcef22ef515853367549df55">   15</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classgui_1_1_game_window.html#a3d7c7f5bfcef22ef515853367549df55">GameWindow</a>(<a class="code hl_class" href="classgui_1_1_game_visualizer.html">GameVisualizer</a> visualizer, <a class="code hl_class" href="classgui_1_1_window_manager.html">WindowManager</a> windowManager) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        super(<span class="stringliteral">&quot;&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        this.m_visualizer = visualizer;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        this.localizationManager = <a class="code hl_class" href="classgui_1_1_localization_manager.html">LocalizationManager</a>.<a class="code hl_function" href="classgui_1_1_localization_manager.html#aa3515a3983230feab9697828d501c1b1">getInstance</a>(windowManager);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        putClientProperty(<span class="stringliteral">&quot;translationKey&quot;</span>, <span class="stringliteral">&quot;game.window.title&quot;</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        JPanel panel = <span class="keyword">new</span> JPanel(<span class="keyword">new</span> BorderLayout());</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        panel.add(<a class="code hl_variable" href="classgui_1_1_game_window.html#a62d3136b9c4b2a523b7f182ebf97c715">m_visualizer</a>, BorderLayout.CENTER);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        getContentPane().add(panel);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        pack();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        addInternalFrameListener(<span class="keyword">new</span> javax.swing.event.InternalFrameAdapter() {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            @Override</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            public void internalFrameClosing(javax.swing.event.InternalFrameEvent e) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                shutdown();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        });</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_variable" href="classgui_1_1_game_window.html#a733894d0274f060c30679ed85429ba04">localizationManager</a>.<a class="code hl_function" href="classgui_1_1_localization_manager.html#a54e3606c3b9a77fb5a2302aab65586c1">updateUI</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classgui_1_1_game_window.html#a815ccfde21dd865d970d3af73a664b08">   37</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgui_1_1_game_window.html#a815ccfde21dd865d970d3af73a664b08">shutdown</a>() {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="classgui_1_1_game_window.html#a62d3136b9c4b2a523b7f182ebf97c715">m_visualizer</a>.shutdown();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+</div>
+<div class="ttc" id="aclassgui_1_1_game_visualizer_html"><div class="ttname"><a href="classgui_1_1_game_visualizer.html">gui.GameVisualizer</a></div><div class="ttdef"><b>Определения</b> <a href="_game_visualizer_8java_source.html#l00015">GameVisualizer.java:15</a></div></div>
+<div class="ttc" id="aclassgui_1_1_game_window_html_a3d7c7f5bfcef22ef515853367549df55"><div class="ttname"><a href="classgui_1_1_game_window.html#a3d7c7f5bfcef22ef515853367549df55">gui.GameWindow.GameWindow</a></div><div class="ttdeci">GameWindow(GameVisualizer visualizer, WindowManager windowManager)</div><div class="ttdef"><b>Определения</b> <a href="#l00015">GameWindow.java:15</a></div></div>
+<div class="ttc" id="aclassgui_1_1_game_window_html_a62d3136b9c4b2a523b7f182ebf97c715"><div class="ttname"><a href="classgui_1_1_game_window.html#a62d3136b9c4b2a523b7f182ebf97c715">gui.GameWindow.m_visualizer</a></div><div class="ttdeci">final GameVisualizer m_visualizer</div><div class="ttdef"><b>Определения</b> <a href="#l00012">GameWindow.java:12</a></div></div>
+<div class="ttc" id="aclassgui_1_1_game_window_html_a733894d0274f060c30679ed85429ba04"><div class="ttname"><a href="classgui_1_1_game_window.html#a733894d0274f060c30679ed85429ba04">gui.GameWindow.localizationManager</a></div><div class="ttdeci">final LocalizationManager localizationManager</div><div class="ttdef"><b>Определения</b> <a href="#l00013">GameWindow.java:13</a></div></div>
+<div class="ttc" id="aclassgui_1_1_game_window_html_a815ccfde21dd865d970d3af73a664b08"><div class="ttname"><a href="classgui_1_1_game_window.html#a815ccfde21dd865d970d3af73a664b08">gui.GameWindow.shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdef"><b>Определения</b> <a href="#l00037">GameWindow.java:37</a></div></div>
+<div class="ttc" id="aclassgui_1_1_localization_manager_html"><div class="ttname"><a href="classgui_1_1_localization_manager.html">gui.LocalizationManager</a></div><div class="ttdef"><b>Определения</b> <a href="_localization_manager_8java_source.html#l00011">LocalizationManager.java:11</a></div></div>
+<div class="ttc" id="aclassgui_1_1_localization_manager_html_a54e3606c3b9a77fb5a2302aab65586c1"><div class="ttname"><a href="classgui_1_1_localization_manager.html#a54e3606c3b9a77fb5a2302aab65586c1">gui.LocalizationManager.updateUI</a></div><div class="ttdeci">void updateUI(Component component)</div><div class="ttdef"><b>Определения</b> <a href="_localization_manager_8java_source.html#l00106">LocalizationManager.java:106</a></div></div>
+<div class="ttc" id="aclassgui_1_1_localization_manager_html_aa3515a3983230feab9697828d501c1b1"><div class="ttname"><a href="classgui_1_1_localization_manager.html#aa3515a3983230feab9697828d501c1b1">gui.LocalizationManager.getInstance</a></div><div class="ttdeci">static LocalizationManager getInstance(WindowManager windowManager)</div><div class="ttdef"><b>Определения</b> <a href="_localization_manager_8java_source.html#l00050">LocalizationManager.java:50</a></div></div>
+<div class="ttc" id="aclassgui_1_1_window_manager_html"><div class="ttname"><a href="classgui_1_1_window_manager.html">gui.WindowManager</a></div><div class="ttdoc">Класс-менеджер управления окнами приложения</div><div class="ttdef"><b>Определения</b> <a href="_window_manager_8java_source.html#l00016">WindowManager.java:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Роботы. Последние изменения: <span class="timestamp"></span>. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

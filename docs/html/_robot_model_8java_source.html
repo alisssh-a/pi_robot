@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Роботы: Исходный файл src/model/RobotModel.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Роботы<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Приложение для симуляции движения робота</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_5dd65160827af56e6353642206b80129.html">model</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">RobotModel.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_robot_model_8java.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="namespacemodel.html">    6</a></span><span class="keyword">package </span>model;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.Observable;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.Timer;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.util.TimerTask;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html">   12</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="classmodel_1_1_robot_model.html#ab453cf4d7a97eb81f4ec563e389530ef">RobotModel</a> <span class="keyword">extends</span> Observable {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#a6ffd249eb07c7cd9cfd351554643cc25">   13</a></span>    <span class="keyword">private</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a6ffd249eb07c7cd9cfd351554643cc25">x</a> = 100;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#afc0d2a3230924cce64fa9dc63979c06a">   14</a></span>    <span class="keyword">private</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="classmodel_1_1_robot_model.html#afc0d2a3230924cce64fa9dc63979c06a">y</a> = 100;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#aac2d711682470673e486a558b4363c8c">   15</a></span>    <span class="keyword">private</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="classmodel_1_1_robot_model.html#aac2d711682470673e486a558b4363c8c">direction</a> = 0;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#a1cfc19eb73a045b98c245aa11f81b08a">   16</a></span>    <span class="keyword">private</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a1cfc19eb73a045b98c245aa11f81b08a">targetX</a> = 150;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#a1186becae252846caadc3af5608d1452">   17</a></span>    <span class="keyword">private</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a1186becae252846caadc3af5608d1452">targetY</a> = 100;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#a2e440fcf668005e442d5d906801f514b">   18</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> Timer <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a2e440fcf668005e442d5d906801f514b">timer</a> = <span class="keyword">new</span> Timer(<span class="stringliteral">&quot;robot_timer&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#ab453cf4d7a97eb81f4ec563e389530ef">   20</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classmodel_1_1_robot_model.html#ab453cf4d7a97eb81f4ec563e389530ef">RobotModel</a>() {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a2e440fcf668005e442d5d906801f514b">timer</a>.schedule(<span class="keyword">new</span> TimerTask() {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            @Override</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> run() {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                <a class="code hl_function" href="classmodel_1_1_robot_model.html#a8a2de2b3eb7afb312251f86be904a95e">updatePosition</a>(0.1);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                setChanged();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                notifyObservers();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }, 0, 30);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#a8a2de2b3eb7afb312251f86be904a95e">   31</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmodel_1_1_robot_model.html#a8a2de2b3eb7afb312251f86be904a95e">updatePosition</a>(<span class="keywordtype">double</span> duration) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">double</span> dx = <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a1cfc19eb73a045b98c245aa11f81b08a">targetX</a> - <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a6ffd249eb07c7cd9cfd351554643cc25">x</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">double</span> dy = <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a1186becae252846caadc3af5608d1452">targetY</a> - <a class="code hl_variable" href="classmodel_1_1_robot_model.html#afc0d2a3230924cce64fa9dc63979c06a">y</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">double</span> distance = Math.sqrt(dx*dx + dy*dy);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">if</span> (distance &lt; 0.5) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="classmodel_1_1_robot_model.html#aac2d711682470673e486a558b4363c8c">direction</a> = Math.atan2(dy, dx);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a6ffd249eb07c7cd9cfd351554643cc25">x</a> += 10 * Math.cos(<a class="code hl_variable" href="classmodel_1_1_robot_model.html#aac2d711682470673e486a558b4363c8c">direction</a>) * duration;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_variable" href="classmodel_1_1_robot_model.html#afc0d2a3230924cce64fa9dc63979c06a">y</a> += 10 * Math.sin(<a class="code hl_variable" href="classmodel_1_1_robot_model.html#aac2d711682470673e486a558b4363c8c">direction</a>) * duration;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#a98c82d41b22ad2bdbe4d9792b609ef5b">   43</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classmodel_1_1_robot_model.html#a98c82d41b22ad2bdbe4d9792b609ef5b">getX</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a6ffd249eb07c7cd9cfd351554643cc25">x</a>; }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#a3671bd56b8c1d84970ac1127ca8e68ad">   44</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classmodel_1_1_robot_model.html#a3671bd56b8c1d84970ac1127ca8e68ad">getY</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classmodel_1_1_robot_model.html#afc0d2a3230924cce64fa9dc63979c06a">y</a>; }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#a099165731d102e1238de8555fd323af1">   45</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classmodel_1_1_robot_model.html#a099165731d102e1238de8555fd323af1">getDirection</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classmodel_1_1_robot_model.html#aac2d711682470673e486a558b4363c8c">direction</a>; }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#aab9c318af07487e281742cda9b3512f1">   46</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classmodel_1_1_robot_model.html#aab9c318af07487e281742cda9b3512f1">getTargetX</a>() { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)<a class="code hl_variable" href="classmodel_1_1_robot_model.html#a1cfc19eb73a045b98c245aa11f81b08a">targetX</a>; }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#a588d4039525d3f6cae750ab05027eab0">   47</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classmodel_1_1_robot_model.html#a588d4039525d3f6cae750ab05027eab0">getTargetY</a>() { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)<a class="code hl_variable" href="classmodel_1_1_robot_model.html#a1186becae252846caadc3af5608d1452">targetY</a>; }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#a7e0a63d2869554656022620989a89778">   49</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmodel_1_1_robot_model.html#a7e0a63d2869554656022620989a89778">setTarget</a>(<span class="keywordtype">double</span> tx, <span class="keywordtype">double</span> ty) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a1cfc19eb73a045b98c245aa11f81b08a">targetX</a> = tx;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a1186becae252846caadc3af5608d1452">targetY</a> = ty;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classmodel_1_1_robot_model.html#ace0bf6019e7629cc2bcadb68bd038179">   54</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmodel_1_1_robot_model.html#ace0bf6019e7629cc2bcadb68bd038179">shutdown</a>() {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_variable" href="classmodel_1_1_robot_model.html#a2e440fcf668005e442d5d906801f514b">timer</a>.cancel();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+</div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_a099165731d102e1238de8555fd323af1"><div class="ttname"><a href="classmodel_1_1_robot_model.html#a099165731d102e1238de8555fd323af1">model.RobotModel.getDirection</a></div><div class="ttdeci">double getDirection()</div><div class="ttdef"><b>Определения</b> <a href="#l00045">RobotModel.java:45</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_a1186becae252846caadc3af5608d1452"><div class="ttname"><a href="classmodel_1_1_robot_model.html#a1186becae252846caadc3af5608d1452">model.RobotModel.targetY</a></div><div class="ttdeci">double targetY</div><div class="ttdef"><b>Определения</b> <a href="#l00017">RobotModel.java:17</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_a1cfc19eb73a045b98c245aa11f81b08a"><div class="ttname"><a href="classmodel_1_1_robot_model.html#a1cfc19eb73a045b98c245aa11f81b08a">model.RobotModel.targetX</a></div><div class="ttdeci">double targetX</div><div class="ttdef"><b>Определения</b> <a href="#l00016">RobotModel.java:16</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_a2e440fcf668005e442d5d906801f514b"><div class="ttname"><a href="classmodel_1_1_robot_model.html#a2e440fcf668005e442d5d906801f514b">model.RobotModel.timer</a></div><div class="ttdeci">final Timer timer</div><div class="ttdef"><b>Определения</b> <a href="#l00018">RobotModel.java:18</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_a3671bd56b8c1d84970ac1127ca8e68ad"><div class="ttname"><a href="classmodel_1_1_robot_model.html#a3671bd56b8c1d84970ac1127ca8e68ad">model.RobotModel.getY</a></div><div class="ttdeci">double getY()</div><div class="ttdef"><b>Определения</b> <a href="#l00044">RobotModel.java:44</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_a588d4039525d3f6cae750ab05027eab0"><div class="ttname"><a href="classmodel_1_1_robot_model.html#a588d4039525d3f6cae750ab05027eab0">model.RobotModel.getTargetY</a></div><div class="ttdeci">int getTargetY()</div><div class="ttdef"><b>Определения</b> <a href="#l00047">RobotModel.java:47</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_a6ffd249eb07c7cd9cfd351554643cc25"><div class="ttname"><a href="classmodel_1_1_robot_model.html#a6ffd249eb07c7cd9cfd351554643cc25">model.RobotModel.x</a></div><div class="ttdeci">double x</div><div class="ttdef"><b>Определения</b> <a href="#l00013">RobotModel.java:13</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_a7e0a63d2869554656022620989a89778"><div class="ttname"><a href="classmodel_1_1_robot_model.html#a7e0a63d2869554656022620989a89778">model.RobotModel.setTarget</a></div><div class="ttdeci">void setTarget(double tx, double ty)</div><div class="ttdef"><b>Определения</b> <a href="#l00049">RobotModel.java:49</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_a8a2de2b3eb7afb312251f86be904a95e"><div class="ttname"><a href="classmodel_1_1_robot_model.html#a8a2de2b3eb7afb312251f86be904a95e">model.RobotModel.updatePosition</a></div><div class="ttdeci">void updatePosition(double duration)</div><div class="ttdef"><b>Определения</b> <a href="#l00031">RobotModel.java:31</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_a98c82d41b22ad2bdbe4d9792b609ef5b"><div class="ttname"><a href="classmodel_1_1_robot_model.html#a98c82d41b22ad2bdbe4d9792b609ef5b">model.RobotModel.getX</a></div><div class="ttdeci">double getX()</div><div class="ttdef"><b>Определения</b> <a href="#l00043">RobotModel.java:43</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_aab9c318af07487e281742cda9b3512f1"><div class="ttname"><a href="classmodel_1_1_robot_model.html#aab9c318af07487e281742cda9b3512f1">model.RobotModel.getTargetX</a></div><div class="ttdeci">int getTargetX()</div><div class="ttdef"><b>Определения</b> <a href="#l00046">RobotModel.java:46</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_aac2d711682470673e486a558b4363c8c"><div class="ttname"><a href="classmodel_1_1_robot_model.html#aac2d711682470673e486a558b4363c8c">model.RobotModel.direction</a></div><div class="ttdeci">double direction</div><div class="ttdef"><b>Определения</b> <a href="#l00015">RobotModel.java:15</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_ab453cf4d7a97eb81f4ec563e389530ef"><div class="ttname"><a href="classmodel_1_1_robot_model.html#ab453cf4d7a97eb81f4ec563e389530ef">model.RobotModel.RobotModel</a></div><div class="ttdeci">RobotModel()</div><div class="ttdef"><b>Определения</b> <a href="#l00020">RobotModel.java:20</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_ace0bf6019e7629cc2bcadb68bd038179"><div class="ttname"><a href="classmodel_1_1_robot_model.html#ace0bf6019e7629cc2bcadb68bd038179">model.RobotModel.shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdef"><b>Определения</b> <a href="#l00054">RobotModel.java:54</a></div></div>
+<div class="ttc" id="aclassmodel_1_1_robot_model_html_afc0d2a3230924cce64fa9dc63979c06a"><div class="ttname"><a href="classmodel_1_1_robot_model.html#afc0d2a3230924cce64fa9dc63979c06a">model.RobotModel.y</a></div><div class="ttdeci">double y</div><div class="ttdef"><b>Определения</b> <a href="#l00014">RobotModel.java:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Роботы. Последние изменения: <span class="timestamp"></span>. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

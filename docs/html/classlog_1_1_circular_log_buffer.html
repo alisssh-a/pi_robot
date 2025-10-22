@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Роботы: Класс log.CircularLogBuffer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Роботы<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Приложение для симуляции движения робота</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="namespacelog.html">log</a></li><li class="navelem"><a href="classlog_1_1_circular_log_buffer.html">CircularLogBuffer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classlog_1_1_circular_log_buffer-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс log.CircularLogBuffer</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:log.CircularLogBuffer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classlog_1_1_circular_log_buffer.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a826588d966a6909b761307d866c28329" id="r_a826588d966a6909b761307d866c28329"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a826588d966a6909b761307d866c28329">CircularLogBuffer</a> (int <a class="el" href="#ab9269110182b8bc3b999fc94de3db507">capacity</a>)</td></tr>
+<tr class="memitem:a79e49b97607fb82b57ced09da273b131" id="r_a79e49b97607fb82b57ced09da273b131"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79e49b97607fb82b57ced09da273b131">append</a> (<a class="el" href="enumlog_1_1_log_level.html">LogLevel</a> logLevel, String message)</td></tr>
+<tr class="memitem:a72e9c24ec5e80b13a358cfb5784f9543" id="r_a72e9c24ec5e80b13a358cfb5784f9543"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72e9c24ec5e80b13a358cfb5784f9543">size</a> ()</td></tr>
+<tr class="memitem:a6bba22132a18975b1ac2a8e89de6a9c2" id="r_a6bba22132a18975b1ac2a8e89de6a9c2"><td class="memItemLeft" align="right" valign="top">Iterable&lt; <a class="el" href="classlog_1_1_log_entry.html">LogEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bba22132a18975b1ac2a8e89de6a9c2">range</a> (int startFrom, int count)</td></tr>
+<tr class="memitem:ac7cac8c15daa60b982c1010435bc1820" id="r_ac7cac8c15daa60b982c1010435bc1820"><td class="memItemLeft" align="right" valign="top">Iterable&lt; <a class="el" href="classlog_1_1_log_entry.html">LogEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7cac8c15daa60b982c1010435bc1820">all</a> ()</td></tr>
+<tr class="memitem:a8e5b400fea97f3f1aeaa6ef8bd315eaa" id="r_a8e5b400fea97f3f1aeaa6ef8bd315eaa"><td class="memItemLeft" align="right" valign="top">Iterator&lt; <a class="el" href="classlog_1_1_log_entry.html">LogEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e5b400fea97f3f1aeaa6ef8bd315eaa">iterator</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a7e181bb1470290bc956bfa9dd7baa4c7" id="r_a7e181bb1470290bc956bfa9dd7baa4c7"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classlog_1_1_log_entry.html">LogEntry</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e181bb1470290bc956bfa9dd7baa4c7">buffer</a></td></tr>
+<tr class="memitem:ab9269110182b8bc3b999fc94de3db507" id="r_ab9269110182b8bc3b999fc94de3db507"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9269110182b8bc3b999fc94de3db507">capacity</a></td></tr>
+<tr class="memitem:a744bb6816df1d90cd365b7c3531720f1" id="r_a744bb6816df1d90cd365b7c3531720f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a744bb6816df1d90cd365b7c3531720f1">head</a></td></tr>
+<tr class="memitem:ab181b16ca4ca572074e3f8fc8f237fe5" id="r_ab181b16ca4ca572074e3f8fc8f237fe5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab181b16ca4ca572074e3f8fc8f237fe5">size</a></td></tr>
+<tr class="memitem:ab15ee4bc68b869b8c63d0f44e7c542d3" id="r_ab15ee4bc68b869b8c63d0f44e7c542d3"><td class="memItemLeft" align="right" valign="top">final ReentrantReadWriteLock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab15ee4bc68b869b8c63d0f44e7c542d3">lock</a> = new ReentrantReadWriteLock()</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00009">9</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a826588d966a6909b761307d866c28329" name="a826588d966a6909b761307d866c28329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a826588d966a6909b761307d866c28329">&#9670;&#160;</a></span>CircularLogBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">log.CircularLogBuffer.CircularLogBuffer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>capacity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00016">16</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_circular_log_buffer_8java_source.html#l00011">capacity</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ac7cac8c15daa60b982c1010435bc1820" name="ac7cac8c15daa60b982c1010435bc1820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7cac8c15daa60b982c1010435bc1820">&#9670;&#160;</a></span>all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Iterable&lt; <a class="el" href="classlog_1_1_log_entry.html">LogEntry</a> &gt; log.CircularLogBuffer.all </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00074">74</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_circular_log_buffer_8java_source.html#l00054">range()</a> и <a class="el" href="_circular_log_buffer_8java_source.html#l00013">size</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_circular_log_buffer_8java_source.html#l00080">iterator()</a>.</p>
+
+</div>
+</div>
+<a id="a79e49b97607fb82b57ced09da273b131" name="a79e49b97607fb82b57ced09da273b131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e49b97607fb82b57ced09da273b131">&#9670;&#160;</a></span>append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log.CircularLogBuffer.append </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumlog_1_1_log_level.html">LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>logLevel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00027">27</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_circular_log_buffer_8java_source.html#l00010">buffer</a>, <a class="el" href="_circular_log_buffer_8java_source.html#l00011">capacity</a>, <a class="el" href="_circular_log_buffer_8java_source.html#l00012">head</a>, <a class="el" href="_circular_log_buffer_8java_source.html#l00014">lock</a> и <a class="el" href="_circular_log_buffer_8java_source.html#l00013">size</a>.</p>
+
+</div>
+</div>
+<a id="a8e5b400fea97f3f1aeaa6ef8bd315eaa" name="a8e5b400fea97f3f1aeaa6ef8bd315eaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5b400fea97f3f1aeaa6ef8bd315eaa">&#9670;&#160;</a></span>iterator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Iterator&lt; <a class="el" href="classlog_1_1_log_entry.html">LogEntry</a> &gt; log.CircularLogBuffer.iterator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00080">80</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_circular_log_buffer_8java_source.html#l00074">all()</a>.</p>
+
+</div>
+</div>
+<a id="a6bba22132a18975b1ac2a8e89de6a9c2" name="a6bba22132a18975b1ac2a8e89de6a9c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bba22132a18975b1ac2a8e89de6a9c2">&#9670;&#160;</a></span>range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Iterable&lt; <a class="el" href="classlog_1_1_log_entry.html">LogEntry</a> &gt; log.CircularLogBuffer.range </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>startFrom</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00054">54</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_circular_log_buffer_8java_source.html#l00010">buffer</a>, <a class="el" href="_circular_log_buffer_8java_source.html#l00011">capacity</a>, <a class="el" href="_circular_log_buffer_8java_source.html#l00012">head</a>, <a class="el" href="_circular_log_buffer_8java_source.html#l00014">lock</a> и <a class="el" href="_circular_log_buffer_8java_source.html#l00013">size</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_circular_log_buffer_8java_source.html#l00074">all()</a>.</p>
+
+</div>
+</div>
+<a id="a72e9c24ec5e80b13a358cfb5784f9543" name="a72e9c24ec5e80b13a358cfb5784f9543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e9c24ec5e80b13a358cfb5784f9543">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int log.CircularLogBuffer.size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00044">44</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_circular_log_buffer_8java_source.html#l00014">lock</a> и <a class="el" href="_circular_log_buffer_8java_source.html#l00013">size</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a7e181bb1470290bc956bfa9dd7baa4c7" name="a7e181bb1470290bc956bfa9dd7baa4c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e181bb1470290bc956bfa9dd7baa4c7">&#9670;&#160;</a></span>buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classlog_1_1_log_entry.html">LogEntry</a> [] log.CircularLogBuffer.buffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00010">10</a></p>
+
+<p class="reference">Используется в <a class="el" href="_circular_log_buffer_8java_source.html#l00027">append()</a> и <a class="el" href="_circular_log_buffer_8java_source.html#l00054">range()</a>.</p>
+
+</div>
+</div>
+<a id="ab9269110182b8bc3b999fc94de3db507" name="ab9269110182b8bc3b999fc94de3db507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9269110182b8bc3b999fc94de3db507">&#9670;&#160;</a></span>capacity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int log.CircularLogBuffer.capacity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00011">11</a></p>
+
+<p class="reference">Используется в <a class="el" href="_circular_log_buffer_8java_source.html#l00027">append()</a>, <a class="el" href="_circular_log_buffer_8java_source.html#l00016">CircularLogBuffer()</a> и <a class="el" href="_circular_log_buffer_8java_source.html#l00054">range()</a>.</p>
+
+</div>
+</div>
+<a id="a744bb6816df1d90cd365b7c3531720f1" name="a744bb6816df1d90cd365b7c3531720f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744bb6816df1d90cd365b7c3531720f1">&#9670;&#160;</a></span>head</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int log.CircularLogBuffer.head</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00012">12</a></p>
+
+<p class="reference">Используется в <a class="el" href="_circular_log_buffer_8java_source.html#l00027">append()</a> и <a class="el" href="_circular_log_buffer_8java_source.html#l00054">range()</a>.</p>
+
+</div>
+</div>
+<a id="ab15ee4bc68b869b8c63d0f44e7c542d3" name="ab15ee4bc68b869b8c63d0f44e7c542d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab15ee4bc68b869b8c63d0f44e7c542d3">&#9670;&#160;</a></span>lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ReentrantReadWriteLock log.CircularLogBuffer.lock = new ReentrantReadWriteLock()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00014">14</a></p>
+
+<p class="reference">Используется в <a class="el" href="_circular_log_buffer_8java_source.html#l00027">append()</a>, <a class="el" href="_circular_log_buffer_8java_source.html#l00054">range()</a> и <a class="el" href="_circular_log_buffer_8java_source.html#l00044">size()</a>.</p>
+
+</div>
+</div>
+<a id="ab181b16ca4ca572074e3f8fc8f237fe5" name="ab181b16ca4ca572074e3f8fc8f237fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab181b16ca4ca572074e3f8fc8f237fe5">&#9670;&#160;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int log.CircularLogBuffer.size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a> строка <a class="el" href="_circular_log_buffer_8java_source.html#l00013">13</a></p>
+
+<p class="reference">Используется в <a class="el" href="_circular_log_buffer_8java_source.html#l00074">all()</a>, <a class="el" href="_circular_log_buffer_8java_source.html#l00027">append()</a>, <a class="el" href="_circular_log_buffer_8java_source.html#l00054">range()</a> и <a class="el" href="_circular_log_buffer_8java_source.html#l00044">size()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>src/log/<a class="el" href="_circular_log_buffer_8java_source.html">CircularLogBuffer.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Роботы. Последние изменения: <span class="timestamp"></span>. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

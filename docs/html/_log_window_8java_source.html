@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Роботы: Исходный файл src/gui/LogWindow.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Роботы<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Приложение для симуляции движения робота</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_99d0482cf009f9d97a0877749b817f19.html">gui</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">LogWindow.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_log_window_8java.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>gui;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> log.*;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> javax.swing.*;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.awt.*;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.awt.event.ActionEvent;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.io.File;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.io.IOException;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.io.PrintWriter;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classgui_1_1_log_window.html">   12</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="classgui_1_1_log_window.html#a1a1805fbd1af810a49b6570369041182">LogWindow</a> <span class="keyword">extends</span> JInternalFrame implements <a class="code hl_interface" href="interfacelog_1_1_log_change_listener.html">LogChangeListener</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classgui_1_1_log_window.html#a3082dcba91e67d760ff697117331fca3">   13</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="classlog_1_1_log_window_source.html">LogWindowSource</a> <a class="code hl_variable" href="classgui_1_1_log_window.html#a3082dcba91e67d760ff697117331fca3">logSource</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classgui_1_1_log_window.html#a3ba86c9212fa5f46392fe24cd3321b19">   14</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> JTextArea <a class="code hl_variable" href="classgui_1_1_log_window.html#a3ba86c9212fa5f46392fe24cd3321b19">logContent</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classgui_1_1_log_window.html#a1f2041c6c6900b925ffba9b43682c49e">   15</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> Timer <a class="code hl_variable" href="classgui_1_1_log_window.html#a1f2041c6c6900b925ffba9b43682c49e">updateTimer</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classgui_1_1_log_window.html#a4c69c4866d670e9eb2ba98b1e2dbab69">   16</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="enumlog_1_1_log_level.html">LogLevel</a> <a class="code hl_variable" href="classgui_1_1_log_window.html#a4c69c4866d670e9eb2ba98b1e2dbab69">currentFilterLevel</a> = <a class="code hl_class" href="enumlog_1_1_log_level.html">LogLevel</a>.<a class="code hl_variable" href="enumlog_1_1_log_level.html#a406141264f777fb0eb8209f1e7bfe8f3">Trace</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classgui_1_1_log_window.html#a545667b34db57c047096770a6c36bbb1">   17</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="classgui_1_1_localization_manager.html">LocalizationManager</a> <a class="code hl_variable" href="classgui_1_1_log_window.html#a545667b34db57c047096770a6c36bbb1">localizationManager</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classgui_1_1_log_window.html#a1a1805fbd1af810a49b6570369041182">   19</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classgui_1_1_log_window.html#a1a1805fbd1af810a49b6570369041182">LogWindow</a>(<a class="code hl_class" href="classlog_1_1_log_window_source.html">LogWindowSource</a> <a class="code hl_variable" href="classgui_1_1_log_window.html#a3082dcba91e67d760ff697117331fca3">logSource</a>, <a class="code hl_class" href="classgui_1_1_window_manager.html">WindowManager</a> windowManager) {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        super(<span class="stringliteral">&quot;&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        this.logSource = <a class="code hl_variable" href="classgui_1_1_log_window.html#a3082dcba91e67d760ff697117331fca3">logSource</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        this.logSource.<a class="code hl_function" href="classlog_1_1_log_window_source.html#aa770fdfb7c9ec3a14e5caed9c1c17911">registerListener</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        this.localizationManager = <a class="code hl_class" href="classgui_1_1_localization_manager.html">LocalizationManager</a>.<a class="code hl_function" href="classgui_1_1_localization_manager.html#aa3515a3983230feab9697828d501c1b1">getInstance</a>(windowManager);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        putClientProperty(<span class="stringliteral">&quot;translationKey&quot;</span>, <span class="stringliteral">&quot;log.window.title&quot;</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_variable" href="classgui_1_1_log_window.html#a3ba86c9212fa5f46392fe24cd3321b19">logContent</a> = <span class="keyword">new</span> JTextArea();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_variable" href="classgui_1_1_log_window.html#a3ba86c9212fa5f46392fe24cd3321b19">logContent</a>.setEditable(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_variable" href="classgui_1_1_log_window.html#a3ba86c9212fa5f46392fe24cd3321b19">logContent</a>.setFont(<span class="keyword">new</span> Font(<span class="stringliteral">&quot;Monospaced&quot;</span>, Font.PLAIN, 12));</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        JScrollPane scrollPane = <span class="keyword">new</span> JScrollPane(<a class="code hl_variable" href="classgui_1_1_log_window.html#a3ba86c9212fa5f46392fe24cd3321b19">logContent</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        JPanel controlPanel = <span class="keyword">new</span> JPanel(<span class="keyword">new</span> FlowLayout(FlowLayout.LEFT));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        JComboBox&lt;LogLevel&gt; levelFilter = <span class="keyword">new</span> JComboBox&lt;&gt;(<a class="code hl_class" href="enumlog_1_1_log_level.html">LogLevel</a>.values());</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        levelFilter.setSelectedItem(<a class="code hl_class" href="enumlog_1_1_log_level.html">LogLevel</a>.<a class="code hl_variable" href="enumlog_1_1_log_level.html#a406141264f777fb0eb8209f1e7bfe8f3">Trace</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        levelFilter.addActionListener(e -&gt; {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_variable" href="classgui_1_1_log_window.html#a4c69c4866d670e9eb2ba98b1e2dbab69">currentFilterLevel</a> = (<a class="code hl_class" href="enumlog_1_1_log_level.html">LogLevel</a>) levelFilter.getSelectedItem();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_function" href="classgui_1_1_log_window.html#ade7530ddd84a517678bc0cfa53c9444b">updateLogContent</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        });</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        JLabel levelLabel = <span class="keyword">new</span> JLabel();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        levelLabel.putClientProperty(<span class="stringliteral">&quot;translationKey&quot;</span>, <span class="stringliteral">&quot;level.label&quot;</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        levelLabel.getAccessibleContext().setAccessibleName(<span class="stringliteral">&quot;level.label&quot;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        controlPanel.add(levelLabel);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        controlPanel.add(levelFilter);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        JButton clearButton = <span class="keyword">new</span> JButton();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        clearButton.putClientProperty(<span class="stringliteral">&quot;translationKey&quot;</span>, <span class="stringliteral">&quot;clear.button&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        clearButton.addActionListener(e -&gt; <a class="code hl_variable" href="classgui_1_1_log_window.html#a3ba86c9212fa5f46392fe24cd3321b19">logContent</a>.setText(<span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        controlPanel.add(clearButton);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        JButton saveButton = <span class="keyword">new</span> JButton();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        saveButton.putClientProperty(<span class="stringliteral">&quot;translationKey&quot;</span>, <span class="stringliteral">&quot;save.button&quot;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        saveButton.addActionListener(this::saveLogToFile);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        controlPanel.add(saveButton);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        JPanel mainPanel = <span class="keyword">new</span> JPanel(<span class="keyword">new</span> BorderLayout());</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        mainPanel.add(controlPanel, BorderLayout.NORTH);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        mainPanel.add(scrollPane, BorderLayout.CENTER);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        getContentPane().add(mainPanel);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        pack();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_variable" href="classgui_1_1_log_window.html#a1f2041c6c6900b925ffba9b43682c49e">updateTimer</a> = <span class="keyword">new</span> Timer(100, e -&gt; <a class="code hl_function" href="classgui_1_1_log_window.html#ade7530ddd84a517678bc0cfa53c9444b">updateLogContent</a>());</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_variable" href="classgui_1_1_log_window.html#a1f2041c6c6900b925ffba9b43682c49e">updateTimer</a>.setRepeats(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_function" href="classgui_1_1_log_window.html#ade7530ddd84a517678bc0cfa53c9444b">updateLogContent</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_variable" href="classgui_1_1_log_window.html#a545667b34db57c047096770a6c36bbb1">localizationManager</a>.updateUI(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classgui_1_1_log_window.html#ade7530ddd84a517678bc0cfa53c9444b">   72</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgui_1_1_log_window.html#ade7530ddd84a517678bc0cfa53c9444b">updateLogContent</a>() {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        StringBuilder content = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">for</span> (<a class="code hl_class" href="classlog_1_1_log_entry.html">LogEntry</a> entry : <a class="code hl_variable" href="classgui_1_1_log_window.html#a3082dcba91e67d760ff697117331fca3">logSource</a>.all()) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">if</span> (entry.getLevel().level() &gt;= <a class="code hl_variable" href="classgui_1_1_log_window.html#a4c69c4866d670e9eb2ba98b1e2dbab69">currentFilterLevel</a>.level()) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                content.append(String.format(<span class="stringliteral">&quot;[%s] %s%n&quot;</span>,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                        entry.getLevel().name(), entry.getMessage()));</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_variable" href="classgui_1_1_log_window.html#a3ba86c9212fa5f46392fe24cd3321b19">logContent</a>.setText(content.toString());</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_variable" href="classgui_1_1_log_window.html#a3ba86c9212fa5f46392fe24cd3321b19">logContent</a>.setCaretPosition(<a class="code hl_variable" href="classgui_1_1_log_window.html#a3ba86c9212fa5f46392fe24cd3321b19">logContent</a>.getDocument().getLength());</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classgui_1_1_log_window.html#a3e4e61b0272bbe36726bfac70a059096">   84</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgui_1_1_log_window.html#a3e4e61b0272bbe36726bfac70a059096">saveLogToFile</a>(ActionEvent e) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        JFileChooser fileChooser = <span class="keyword">new</span> JFileChooser();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        fileChooser.setDialogTitle(<a class="code hl_variable" href="classgui_1_1_log_window.html#a545667b34db57c047096770a6c36bbb1">localizationManager</a>.getString(<span class="stringliteral">&quot;save.log.title&quot;</span>));</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        fileChooser.setSelectedFile(<span class="keyword">new</span> File(<span class="stringliteral">&quot;robot_log.txt&quot;</span>));</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">if</span> (fileChooser.showSaveDialog(<span class="keyword">this</span>) == JFileChooser.APPROVE_OPTION) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            File file = fileChooser.getSelectedFile();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">try</span> (PrintWriter writer = <span class="keyword">new</span> PrintWriter(file)) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordflow">for</span> (<a class="code hl_class" href="classlog_1_1_log_entry.html">LogEntry</a> entry : <a class="code hl_variable" href="classgui_1_1_log_window.html#a3082dcba91e67d760ff697117331fca3">logSource</a>.all()) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    writer.printf(<span class="stringliteral">&quot;[%s] %s%n&quot;</span>,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                            entry.getLevel().name(), entry.getMessage());</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <a class="code hl_class" href="classlog_1_1_logger.html">Logger</a>.<a class="code hl_function" href="classlog_1_1_logger.html#a5ab825f1af878e7b947e640415a3d820">debug</a>(<a class="code hl_variable" href="classgui_1_1_log_window.html#a545667b34db57c047096770a6c36bbb1">localizationManager</a>.getString(<span class="stringliteral">&quot;log.saved.message&quot;</span>) + <span class="stringliteral">&quot;: &quot;</span> + file.getAbsolutePath());</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            } <span class="keywordflow">catch</span> (IOException ex) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                <a class="code hl_class" href="classlog_1_1_logger.html">Logger</a>.<a class="code hl_function" href="classlog_1_1_logger.html#a3fc72a227a7b2076cfba3a1ad79e3e12">error</a>(<a class="code hl_variable" href="classgui_1_1_log_window.html#a545667b34db57c047096770a6c36bbb1">localizationManager</a>.getString(<span class="stringliteral">&quot;log.save.error&quot;</span>) + <span class="stringliteral">&quot;: &quot;</span> + ex.getMessage());</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                JOptionPane.showMessageDialog(<span class="keyword">this</span>,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                        <a class="code hl_variable" href="classgui_1_1_log_window.html#a545667b34db57c047096770a6c36bbb1">localizationManager</a>.getString(<span class="stringliteral">&quot;log.save.error.message&quot;</span>),</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                        <a class="code hl_variable" href="classgui_1_1_log_window.html#a545667b34db57c047096770a6c36bbb1">localizationManager</a>.getString(<span class="stringliteral">&quot;error.title&quot;</span>),</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                        JOptionPane.ERROR_MESSAGE);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    @Override</div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classgui_1_1_log_window.html#af8efc4c7205729866f753357770173cf">  108</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgui_1_1_log_window.html#af8efc4c7205729866f753357770173cf">onLogChanged</a>() {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classgui_1_1_log_window.html#a1f2041c6c6900b925ffba9b43682c49e">updateTimer</a>.isRunning()) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <a class="code hl_variable" href="classgui_1_1_log_window.html#a1f2041c6c6900b925ffba9b43682c49e">updateTimer</a>.start();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    @Override</div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classgui_1_1_log_window.html#a67403febfa87f475f8fd3e00ac0c2963">  115</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgui_1_1_log_window.html#a67403febfa87f475f8fd3e00ac0c2963">dispose</a>() {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <a class="code hl_variable" href="classgui_1_1_log_window.html#a3082dcba91e67d760ff697117331fca3">logSource</a>.unregisterListener(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_variable" href="classgui_1_1_log_window.html#a1f2041c6c6900b925ffba9b43682c49e">updateTimer</a>.stop();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        super.dispose();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+</div>
+<div class="ttc" id="aclassgui_1_1_localization_manager_html"><div class="ttname"><a href="classgui_1_1_localization_manager.html">gui.LocalizationManager</a></div><div class="ttdef"><b>Определения</b> <a href="_localization_manager_8java_source.html#l00011">LocalizationManager.java:11</a></div></div>
+<div class="ttc" id="aclassgui_1_1_localization_manager_html_aa3515a3983230feab9697828d501c1b1"><div class="ttname"><a href="classgui_1_1_localization_manager.html#aa3515a3983230feab9697828d501c1b1">gui.LocalizationManager.getInstance</a></div><div class="ttdeci">static LocalizationManager getInstance(WindowManager windowManager)</div><div class="ttdef"><b>Определения</b> <a href="_localization_manager_8java_source.html#l00050">LocalizationManager.java:50</a></div></div>
+<div class="ttc" id="aclassgui_1_1_log_window_html_a1a1805fbd1af810a49b6570369041182"><div class="ttname"><a href="classgui_1_1_log_window.html#a1a1805fbd1af810a49b6570369041182">gui.LogWindow.LogWindow</a></div><div class="ttdeci">LogWindow(LogWindowSource logSource, WindowManager windowManager)</div><div class="ttdef"><b>Определения</b> <a href="#l00019">LogWindow.java:19</a></div></div>
+<div class="ttc" id="aclassgui_1_1_log_window_html_a1f2041c6c6900b925ffba9b43682c49e"><div class="ttname"><a href="classgui_1_1_log_window.html#a1f2041c6c6900b925ffba9b43682c49e">gui.LogWindow.updateTimer</a></div><div class="ttdeci">final Timer updateTimer</div><div class="ttdef"><b>Определения</b> <a href="#l00015">LogWindow.java:15</a></div></div>
+<div class="ttc" id="aclassgui_1_1_log_window_html_a3082dcba91e67d760ff697117331fca3"><div class="ttname"><a href="classgui_1_1_log_window.html#a3082dcba91e67d760ff697117331fca3">gui.LogWindow.logSource</a></div><div class="ttdeci">final LogWindowSource logSource</div><div class="ttdef"><b>Определения</b> <a href="#l00013">LogWindow.java:13</a></div></div>
+<div class="ttc" id="aclassgui_1_1_log_window_html_a3ba86c9212fa5f46392fe24cd3321b19"><div class="ttname"><a href="classgui_1_1_log_window.html#a3ba86c9212fa5f46392fe24cd3321b19">gui.LogWindow.logContent</a></div><div class="ttdeci">final JTextArea logContent</div><div class="ttdef"><b>Определения</b> <a href="#l00014">LogWindow.java:14</a></div></div>
+<div class="ttc" id="aclassgui_1_1_log_window_html_a3e4e61b0272bbe36726bfac70a059096"><div class="ttname"><a href="classgui_1_1_log_window.html#a3e4e61b0272bbe36726bfac70a059096">gui.LogWindow.saveLogToFile</a></div><div class="ttdeci">void saveLogToFile(ActionEvent e)</div><div class="ttdef"><b>Определения</b> <a href="#l00084">LogWindow.java:84</a></div></div>
+<div class="ttc" id="aclassgui_1_1_log_window_html_a4c69c4866d670e9eb2ba98b1e2dbab69"><div class="ttname"><a href="classgui_1_1_log_window.html#a4c69c4866d670e9eb2ba98b1e2dbab69">gui.LogWindow.currentFilterLevel</a></div><div class="ttdeci">LogLevel currentFilterLevel</div><div class="ttdef"><b>Определения</b> <a href="#l00016">LogWindow.java:16</a></div></div>
+<div class="ttc" id="aclassgui_1_1_log_window_html_a545667b34db57c047096770a6c36bbb1"><div class="ttname"><a href="classgui_1_1_log_window.html#a545667b34db57c047096770a6c36bbb1">gui.LogWindow.localizationManager</a></div><div class="ttdeci">final LocalizationManager localizationManager</div><div class="ttdef"><b>Определения</b> <a href="#l00017">LogWindow.java:17</a></div></div>
+<div class="ttc" id="aclassgui_1_1_log_window_html_a67403febfa87f475f8fd3e00ac0c2963"><div class="ttname"><a href="classgui_1_1_log_window.html#a67403febfa87f475f8fd3e00ac0c2963">gui.LogWindow.dispose</a></div><div class="ttdeci">void dispose()</div><div class="ttdef"><b>Определения</b> <a href="#l00115">LogWindow.java:115</a></div></div>
+<div class="ttc" id="aclassgui_1_1_log_window_html_ade7530ddd84a517678bc0cfa53c9444b"><div class="ttname"><a href="classgui_1_1_log_window.html#ade7530ddd84a517678bc0cfa53c9444b">gui.LogWindow.updateLogContent</a></div><div class="ttdeci">void updateLogContent()</div><div class="ttdef"><b>Определения</b> <a href="#l00072">LogWindow.java:72</a></div></div>
+<div class="ttc" id="aclassgui_1_1_log_window_html_af8efc4c7205729866f753357770173cf"><div class="ttname"><a href="classgui_1_1_log_window.html#af8efc4c7205729866f753357770173cf">gui.LogWindow.onLogChanged</a></div><div class="ttdeci">void onLogChanged()</div><div class="ttdef"><b>Определения</b> <a href="#l00108">LogWindow.java:108</a></div></div>
+<div class="ttc" id="aclassgui_1_1_window_manager_html"><div class="ttname"><a href="classgui_1_1_window_manager.html">gui.WindowManager</a></div><div class="ttdoc">Класс-менеджер управления окнами приложения</div><div class="ttdef"><b>Определения</b> <a href="_window_manager_8java_source.html#l00016">WindowManager.java:16</a></div></div>
+<div class="ttc" id="aclasslog_1_1_log_entry_html"><div class="ttname"><a href="classlog_1_1_log_entry.html">log.LogEntry</a></div><div class="ttdef"><b>Определения</b> <a href="_log_entry_8java_source.html#l00005">LogEntry.java:6</a></div></div>
+<div class="ttc" id="aclasslog_1_1_log_window_source_html"><div class="ttname"><a href="classlog_1_1_log_window_source.html">log.LogWindowSource</a></div><div class="ttdef"><b>Определения</b> <a href="_log_window_source_8java_source.html#l00009">LogWindowSource.java:9</a></div></div>
+<div class="ttc" id="aclasslog_1_1_log_window_source_html_aa770fdfb7c9ec3a14e5caed9c1c17911"><div class="ttname"><a href="classlog_1_1_log_window_source.html#aa770fdfb7c9ec3a14e5caed9c1c17911">log.LogWindowSource.registerListener</a></div><div class="ttdeci">void registerListener(LogChangeListener listener)</div><div class="ttdef"><b>Определения</b> <a href="_log_window_source_8java_source.html#l00018">LogWindowSource.java:18</a></div></div>
+<div class="ttc" id="aclasslog_1_1_logger_html"><div class="ttname"><a href="classlog_1_1_logger.html">log.Logger</a></div><div class="ttdef"><b>Определения</b> <a href="_logger_8java_source.html#l00005">Logger.java:5</a></div></div>
+<div class="ttc" id="aclasslog_1_1_logger_html_a3fc72a227a7b2076cfba3a1ad79e3e12"><div class="ttname"><a href="classlog_1_1_logger.html#a3fc72a227a7b2076cfba3a1ad79e3e12">log.Logger.error</a></div><div class="ttdeci">static void error(String message)</div><div class="ttdef"><b>Определения</b> <a href="_logger_8java_source.html#l00026">Logger.java:26</a></div></div>
+<div class="ttc" id="aclasslog_1_1_logger_html_a5ab825f1af878e7b947e640415a3d820"><div class="ttname"><a href="classlog_1_1_logger.html#a5ab825f1af878e7b947e640415a3d820">log.Logger.debug</a></div><div class="ttdeci">static void debug(String message)</div><div class="ttdef"><b>Определения</b> <a href="_logger_8java_source.html#l00014">Logger.java:14</a></div></div>
+<div class="ttc" id="aenumlog_1_1_log_level_html"><div class="ttname"><a href="enumlog_1_1_log_level.html">log.LogLevel</a></div><div class="ttdef"><b>Определения</b> <a href="_log_level_8java_source.html#l00005">LogLevel.java:6</a></div></div>
+<div class="ttc" id="aenumlog_1_1_log_level_html_a406141264f777fb0eb8209f1e7bfe8f3"><div class="ttname"><a href="enumlog_1_1_log_level.html#a406141264f777fb0eb8209f1e7bfe8f3">log.LogLevel.Trace</a></div><div class="ttdeci">Trace</div><div class="ttdef"><b>Определения</b> <a href="_log_level_8java_source.html#l00007">LogLevel.java:7</a></div></div>
+<div class="ttc" id="ainterfacelog_1_1_log_change_listener_html"><div class="ttname"><a href="interfacelog_1_1_log_change_listener.html">log.LogChangeListener</a></div><div class="ttdef"><b>Определения</b> <a href="_log_change_listener_8java_source.html#l00008">LogChangeListener.java:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Роботы. Последние изменения: <span class="timestamp"></span>. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

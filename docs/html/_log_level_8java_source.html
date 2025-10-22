@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Роботы: Исходный файл src/log/LogLevel.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Роботы<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Приложение для симуляции движения робота</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_2241064965c8d9ca993f08b926076f7d.html">log</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">LogLevel.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_log_level_8java.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>log;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Определяются уровни важности сообщений</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="enumlog_1_1_log_level.html">    5</a></span><span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_function" href="enumlog_1_1_log_level.html#acfd5a19caf5f4c4d9e201ad5f8df7cea">LogLevel</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="enumlog_1_1_log_level.html#a406141264f777fb0eb8209f1e7bfe8f3">    7</a></span>    <a class="code hl_variable" href="enumlog_1_1_log_level.html#a406141264f777fb0eb8209f1e7bfe8f3">Trace</a>(0),</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="enumlog_1_1_log_level.html#a7ea168bb75d418ed4811ff32f1f247fb">    8</a></span>    <a class="code hl_variable" href="enumlog_1_1_log_level.html#a7ea168bb75d418ed4811ff32f1f247fb">Debug</a>(1),</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="enumlog_1_1_log_level.html#a60c77e1f764154711eea031ff5ee4b13">    9</a></span>    <a class="code hl_variable" href="enumlog_1_1_log_level.html#a60c77e1f764154711eea031ff5ee4b13">Info</a>(2),</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="enumlog_1_1_log_level.html#a6abcf7c9fbef3bab4c9f99c2da498af4">   10</a></span>    <a class="code hl_variable" href="enumlog_1_1_log_level.html#a6abcf7c9fbef3bab4c9f99c2da498af4">Warning</a>(3),</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="enumlog_1_1_log_level.html#ad0c9e80593e48bcb76343496092ec335">   11</a></span>    <a class="code hl_variable" href="enumlog_1_1_log_level.html#ad0c9e80593e48bcb76343496092ec335">Error</a>(4),</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="enumlog_1_1_log_level.html#a0196a65dec44df88af74027ddbe91776">   12</a></span>    <a class="code hl_variable" href="enumlog_1_1_log_level.html#a0196a65dec44df88af74027ddbe91776">Fatal</a>(5);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="enumlog_1_1_log_level.html#ab86a7ca5ee74160ae528806f5a2da574">   14</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="enumlog_1_1_log_level.html#ab86a7ca5ee74160ae528806f5a2da574">m_iLevel</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="enumlog_1_1_log_level.html#acfd5a19caf5f4c4d9e201ad5f8df7cea">   16</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="enumlog_1_1_log_level.html#acfd5a19caf5f4c4d9e201ad5f8df7cea">LogLevel</a>(<span class="keywordtype">int</span> iLevel)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_variable" href="enumlog_1_1_log_level.html#ab86a7ca5ee74160ae528806f5a2da574">m_iLevel</a> = iLevel;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="enumlog_1_1_log_level.html#aaab19801dffb30fbcdf7fdcedd5d7815">   21</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="enumlog_1_1_log_level.html#aaab19801dffb30fbcdf7fdcedd5d7815">level</a>()</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="enumlog_1_1_log_level.html#ab86a7ca5ee74160ae528806f5a2da574">m_iLevel</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="ttc" id="aenumlog_1_1_log_level_html_a0196a65dec44df88af74027ddbe91776"><div class="ttname"><a href="enumlog_1_1_log_level.html#a0196a65dec44df88af74027ddbe91776">log.LogLevel.Fatal</a></div><div class="ttdeci">Fatal</div><div class="ttdef"><b>Определения</b> <a href="#l00012">LogLevel.java:12</a></div></div>
+<div class="ttc" id="aenumlog_1_1_log_level_html_a406141264f777fb0eb8209f1e7bfe8f3"><div class="ttname"><a href="enumlog_1_1_log_level.html#a406141264f777fb0eb8209f1e7bfe8f3">log.LogLevel.Trace</a></div><div class="ttdeci">Trace</div><div class="ttdef"><b>Определения</b> <a href="#l00007">LogLevel.java:7</a></div></div>
+<div class="ttc" id="aenumlog_1_1_log_level_html_a60c77e1f764154711eea031ff5ee4b13"><div class="ttname"><a href="enumlog_1_1_log_level.html#a60c77e1f764154711eea031ff5ee4b13">log.LogLevel.Info</a></div><div class="ttdeci">Info</div><div class="ttdef"><b>Определения</b> <a href="#l00009">LogLevel.java:9</a></div></div>
+<div class="ttc" id="aenumlog_1_1_log_level_html_a6abcf7c9fbef3bab4c9f99c2da498af4"><div class="ttname"><a href="enumlog_1_1_log_level.html#a6abcf7c9fbef3bab4c9f99c2da498af4">log.LogLevel.Warning</a></div><div class="ttdeci">Warning</div><div class="ttdef"><b>Определения</b> <a href="#l00010">LogLevel.java:10</a></div></div>
+<div class="ttc" id="aenumlog_1_1_log_level_html_a7ea168bb75d418ed4811ff32f1f247fb"><div class="ttname"><a href="enumlog_1_1_log_level.html#a7ea168bb75d418ed4811ff32f1f247fb">log.LogLevel.Debug</a></div><div class="ttdeci">Debug</div><div class="ttdef"><b>Определения</b> <a href="#l00008">LogLevel.java:8</a></div></div>
+<div class="ttc" id="aenumlog_1_1_log_level_html_aaab19801dffb30fbcdf7fdcedd5d7815"><div class="ttname"><a href="enumlog_1_1_log_level.html#aaab19801dffb30fbcdf7fdcedd5d7815">log.LogLevel.level</a></div><div class="ttdeci">int level()</div><div class="ttdef"><b>Определения</b> <a href="#l00021">LogLevel.java:21</a></div></div>
+<div class="ttc" id="aenumlog_1_1_log_level_html_ab86a7ca5ee74160ae528806f5a2da574"><div class="ttname"><a href="enumlog_1_1_log_level.html#ab86a7ca5ee74160ae528806f5a2da574">log.LogLevel.m_iLevel</a></div><div class="ttdeci">int m_iLevel</div><div class="ttdef"><b>Определения</b> <a href="#l00014">LogLevel.java:14</a></div></div>
+<div class="ttc" id="aenumlog_1_1_log_level_html_acfd5a19caf5f4c4d9e201ad5f8df7cea"><div class="ttname"><a href="enumlog_1_1_log_level.html#acfd5a19caf5f4c4d9e201ad5f8df7cea">log.LogLevel.LogLevel</a></div><div class="ttdeci">LogLevel(int iLevel)</div><div class="ttdef"><b>Определения</b> <a href="#l00016">LogLevel.java:16</a></div></div>
+<div class="ttc" id="aenumlog_1_1_log_level_html_ad0c9e80593e48bcb76343496092ec335"><div class="ttname"><a href="enumlog_1_1_log_level.html#ad0c9e80593e48bcb76343496092ec335">log.LogLevel.Error</a></div><div class="ttdeci">Error</div><div class="ttdef"><b>Определения</b> <a href="#l00011">LogLevel.java:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Роботы. Последние изменения: <span class="timestamp"></span>. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

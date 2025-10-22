@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Роботы: Класс log.Logger</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Роботы<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Приложение для симуляции движения робота</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="namespacelog.html">log</a></li><li class="navelem"><a href="classlog_1_1_logger.html">Logger</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-static-attribs">Закрытые статические данные</a> &#124;
+<a href="classlog_1_1_logger-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс log.Logger</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a2466588baa85c7a22d30ec1be3c3e72a" id="r_a2466588baa85c7a22d30ec1be3c3e72a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2466588baa85c7a22d30ec1be3c3e72a">trace</a> (String message)</td></tr>
+<tr class="memitem:a5ab825f1af878e7b947e640415a3d820" id="r_a5ab825f1af878e7b947e640415a3d820"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ab825f1af878e7b947e640415a3d820">debug</a> (String message)</td></tr>
+<tr class="memitem:a63b512efbfb53ae86a3ff8873860c8dc" id="r_a63b512efbfb53ae86a3ff8873860c8dc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63b512efbfb53ae86a3ff8873860c8dc">info</a> (String message)</td></tr>
+<tr class="memitem:a7c5a17bf3cbdd36ec032f142d121edaa" id="r_a7c5a17bf3cbdd36ec032f142d121edaa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c5a17bf3cbdd36ec032f142d121edaa">warn</a> (String message)</td></tr>
+<tr class="memitem:a3fc72a227a7b2076cfba3a1ad79e3e12" id="r_a3fc72a227a7b2076cfba3a1ad79e3e12"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fc72a227a7b2076cfba3a1ad79e3e12">error</a> (String message)</td></tr>
+<tr class="memitem:af980387f404f8841964974aa3e3dc496" id="r_af980387f404f8841964974aa3e3dc496"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af980387f404f8841964974aa3e3dc496">fatal</a> (String message)</td></tr>
+<tr class="memitem:adf9200acf7ccdc3dcfe3013251e72593" id="r_adf9200acf7ccdc3dcfe3013251e72593"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classlog_1_1_log_window_source.html">LogWindowSource</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf9200acf7ccdc3dcfe3013251e72593">getDefaultLogSource</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:af8472c12ed4199d0173eebb9fa6f96fc" id="r_af8472c12ed4199d0173eebb9fa6f96fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8472c12ed4199d0173eebb9fa6f96fc">Logger</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Закрытые статические данные</h2></td></tr>
+<tr class="memitem:ac5d281e3d34323c9dc34a4e992ef9b83" id="r_ac5d281e3d34323c9dc34a4e992ef9b83"><td class="memItemLeft" align="right" valign="top">static final <a class="el" href="classlog_1_1_log_window_source.html">LogWindowSource</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5d281e3d34323c9dc34a4e992ef9b83">defaultLogSource</a> = new <a class="el" href="classlog_1_1_log_window_source.html">LogWindowSource</a>(20)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="_logger_8java_source.html">Logger.java</a> строка <a class="el" href="_logger_8java_source.html#l00005">5</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="af8472c12ed4199d0173eebb9fa6f96fc" name="af8472c12ed4199d0173eebb9fa6f96fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8472c12ed4199d0173eebb9fa6f96fc">&#9670;&#160;</a></span>Logger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">log.Logger.Logger </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_logger_8java_source.html">Logger.java</a> строка <a class="el" href="_logger_8java_source.html#l00008">8</a></p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a5ab825f1af878e7b947e640415a3d820" name="a5ab825f1af878e7b947e640415a3d820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab825f1af878e7b947e640415a3d820">&#9670;&#160;</a></span>debug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log.Logger.debug </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_logger_8java_source.html">Logger.java</a> строка <a class="el" href="_logger_8java_source.html#l00014">14</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_log_level_8java_source.html#l00008">log.LogLevel.Debug</a> и <a class="el" href="_logger_8java_source.html#l00006">defaultLogSource</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00226">gui.WindowManager.centerWindow()</a>, <a class="el" href="_main_application_frame_8java_source.html#l00096">gui.MainApplicationFrame.createTestMenu()</a>, <a class="el" href="_main_application_frame_8java_source.html#l00200">gui.MainApplicationFrame.exitApplication()</a>, <a class="el" href="_window_manager_8java_source.html#l00123">gui.WindowManager.loadWindowState()</a>, <a class="el" href="_main_application_frame_8java_source.html#l00029">gui.MainApplicationFrame.MainApplicationFrame()</a>, <a class="el" href="_log_window_8java_source.html#l00084">gui.LogWindow.saveLogToFile()</a>, <a class="el" href="_window_manager_8java_source.html#l00257">gui.WindowManager.saveProperties()</a>, <a class="el" href="_window_manager_8java_source.html#l00085">gui.WindowManager.saveWindowState()</a> и <a class="el" href="_main_application_frame_8java_source.html#l00130">gui.MainApplicationFrame.setLookAndFeel()</a>.</p>
+
+</div>
+</div>
+<a id="a3fc72a227a7b2076cfba3a1ad79e3e12" name="a3fc72a227a7b2076cfba3a1ad79e3e12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc72a227a7b2076cfba3a1ad79e3e12">&#9670;&#160;</a></span>error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log.Logger.error </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_logger_8java_source.html">Logger.java</a> строка <a class="el" href="_logger_8java_source.html#l00026">26</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_logger_8java_source.html#l00006">defaultLogSource</a> и <a class="el" href="_log_level_8java_source.html#l00011">log.LogLevel.Error</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00068">gui.WindowManager.addWindow()</a>, <a class="el" href="_window_manager_8java_source.html#l00206">gui.WindowManager.loadInternalFrameState()</a>, <a class="el" href="_window_manager_8java_source.html#l00239">gui.WindowManager.loadProperties()</a>, <a class="el" href="_window_manager_8java_source.html#l00123">gui.WindowManager.loadWindowState()</a>, <a class="el" href="_main_application_frame_8java_source.html#l00029">gui.MainApplicationFrame.MainApplicationFrame()</a>, <a class="el" href="_log_window_8java_source.html#l00084">gui.LogWindow.saveLogToFile()</a> и <a class="el" href="_window_manager_8java_source.html#l00257">gui.WindowManager.saveProperties()</a>.</p>
+
+</div>
+</div>
+<a id="af980387f404f8841964974aa3e3dc496" name="af980387f404f8841964974aa3e3dc496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af980387f404f8841964974aa3e3dc496">&#9670;&#160;</a></span>fatal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log.Logger.fatal </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_logger_8java_source.html">Logger.java</a> строка <a class="el" href="_logger_8java_source.html#l00030">30</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_logger_8java_source.html#l00006">defaultLogSource</a> и <a class="el" href="_log_level_8java_source.html#l00012">log.LogLevel.Fatal</a>.</p>
+
+</div>
+</div>
+<a id="adf9200acf7ccdc3dcfe3013251e72593" name="adf9200acf7ccdc3dcfe3013251e72593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf9200acf7ccdc3dcfe3013251e72593">&#9670;&#160;</a></span>getDefaultLogSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlog_1_1_log_window_source.html">LogWindowSource</a> log.Logger.getDefaultLogSource </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_logger_8java_source.html">Logger.java</a> строка <a class="el" href="_logger_8java_source.html#l00034">34</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_logger_8java_source.html#l00006">defaultLogSource</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_window_manager_8java_source.html#l00041">gui.WindowManager.initializeWindows()</a>.</p>
+
+</div>
+</div>
+<a id="a63b512efbfb53ae86a3ff8873860c8dc" name="a63b512efbfb53ae86a3ff8873860c8dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b512efbfb53ae86a3ff8873860c8dc">&#9670;&#160;</a></span>info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log.Logger.info </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_logger_8java_source.html">Logger.java</a> строка <a class="el" href="_logger_8java_source.html#l00018">18</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_logger_8java_source.html#l00006">defaultLogSource</a> и <a class="el" href="_log_level_8java_source.html#l00009">log.LogLevel.Info</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="_main_application_frame_8java_source.html#l00029">gui.MainApplicationFrame.MainApplicationFrame()</a>.</p>
+
+</div>
+</div>
+<a id="a2466588baa85c7a22d30ec1be3c3e72a" name="a2466588baa85c7a22d30ec1be3c3e72a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2466588baa85c7a22d30ec1be3c3e72a">&#9670;&#160;</a></span>trace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log.Logger.trace </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_logger_8java_source.html">Logger.java</a> строка <a class="el" href="_logger_8java_source.html#l00010">10</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_logger_8java_source.html#l00006">defaultLogSource</a> и <a class="el" href="_log_level_8java_source.html#l00007">log.LogLevel.Trace</a>.</p>
+
+</div>
+</div>
+<a id="a7c5a17bf3cbdd36ec032f142d121edaa" name="a7c5a17bf3cbdd36ec032f142d121edaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c5a17bf3cbdd36ec032f142d121edaa">&#9670;&#160;</a></span>warn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log.Logger.warn </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_logger_8java_source.html">Logger.java</a> строка <a class="el" href="_logger_8java_source.html#l00022">22</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_logger_8java_source.html#l00006">defaultLogSource</a> и <a class="el" href="_log_level_8java_source.html#l00010">log.LogLevel.Warning</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="ac5d281e3d34323c9dc34a4e992ef9b83" name="ac5d281e3d34323c9dc34a4e992ef9b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5d281e3d34323c9dc34a4e992ef9b83">&#9670;&#160;</a></span>defaultLogSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classlog_1_1_log_window_source.html">LogWindowSource</a> log.Logger.defaultLogSource = new <a class="el" href="classlog_1_1_log_window_source.html">LogWindowSource</a>(20)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_logger_8java_source.html">Logger.java</a> строка <a class="el" href="_logger_8java_source.html#l00006">6</a></p>
+
+<p class="reference">Используется в <a class="el" href="_logger_8java_source.html#l00014">debug()</a>, <a class="el" href="_logger_8java_source.html#l00026">error()</a>, <a class="el" href="_logger_8java_source.html#l00030">fatal()</a>, <a class="el" href="_logger_8java_source.html#l00034">getDefaultLogSource()</a>, <a class="el" href="_logger_8java_source.html#l00018">info()</a>, <a class="el" href="_logger_8java_source.html#l00010">trace()</a> и <a class="el" href="_logger_8java_source.html#l00022">warn()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>src/log/<a class="el" href="_logger_8java_source.html">Logger.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Роботы. Последние изменения: <span class="timestamp"></span>. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
