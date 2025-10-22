@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.Properties;
 
 public class WindowManager {
+
     private final JDesktopPane desktopPane;
     private final RobotModel robotModel;
     private static final String CONFIG_PATH = System.getProperty("user.home") + "/robots_config.properties";
@@ -23,6 +24,7 @@ public class WindowManager {
     }
 
     public void initializeWindows() {
+
         desktopPane.removeAll();
 
         LogWindow logWindow = new LogWindow(Logger.getDefaultLogSource(), this); // Передаём this
@@ -44,10 +46,12 @@ public class WindowManager {
     }
 
     public void addWindow(JInternalFrame frame) {
+
         desktopPane.add(frame);
         frame.setVisible(true);
         try {
             frame.setSelected(true);
+
         } catch (java.beans.PropertyVetoException e) {
             Logger.error(localizationManager.getString("window.selection.error") + ": " + e.getMessage());
         }
@@ -110,6 +114,7 @@ public class WindowManager {
             return;
         }
 
+
         try {
             int state = Integer.parseInt(props.getProperty("main.state", String.valueOf(Frame.MAXIMIZED_BOTH)));
             Logger.debug(localizationManager.getString("loaded.window.state") + ": state=" + state);
@@ -148,6 +153,7 @@ public class WindowManager {
     }
 
     private void saveInternalFrameState(JInternalFrame frame, String name, Properties props) {
+
         props.setProperty(name + ".x", String.valueOf(frame.getX()));
         props.setProperty(name + ".y", String.valueOf(frame.getY()));
         props.setProperty(name + ".width", String.valueOf(frame.getWidth()));
@@ -157,6 +163,7 @@ public class WindowManager {
 
     private void loadInternalFrameState(JInternalFrame frame, String name, Properties props) {
         try {
+
             int x = Integer.parseInt(props.getProperty(name + ".x", "50"));
             int y = Integer.parseInt(props.getProperty(name + ".y", "50"));
             int width = Integer.parseInt(props.getProperty(name + ".width", "300"));
@@ -171,6 +178,7 @@ public class WindowManager {
     }
 
     private void centerWindow(JFrame frame) {
+
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int x = (screenSize.width - frame.getWidth()) / 2;
         int y = (screenSize.height - frame.getHeight()) / 2;
@@ -179,6 +187,7 @@ public class WindowManager {
     }
 
     private Properties loadProperties() {
+
         Properties props = new Properties();
         File configFile = new File(CONFIG_PATH);
         if (configFile.exists()) {
@@ -192,6 +201,7 @@ public class WindowManager {
     }
 
     private void saveProperties(Properties props) {
+
         try {
             File configFile = new File(CONFIG_PATH);
             configFile.getParentFile().mkdirs();
@@ -205,18 +215,21 @@ public class WindowManager {
     }
 
     public void saveLocale(String language) {
+
         Properties properties = loadProperties();
         properties.setProperty(LOCALE_KEY, language);
         saveProperties(properties);
     }
 
     public String loadLocale() {
+
         Properties properties = loadProperties();
         String language = properties.getProperty(LOCALE_KEY);
         return language;
     }
 
     public void shutdown() {
+
         JFrame mainFrame = desktopPane.getTopLevelAncestor() instanceof JFrame ? (JFrame) desktopPane.getTopLevelAncestor() : null;
         if (mainFrame != null) {
             saveWindowState(mainFrame);
