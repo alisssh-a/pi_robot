@@ -1,3 +1,7 @@
+/**
+ * @brief Источник сообщений для окна лога
+ * @details Управляет циклическим буфером логов и уведомляет подписчиков о новых сообщениях
+ */
 package log;
 
 import java.util.concurrent.CopyOnWriteArrayList;
