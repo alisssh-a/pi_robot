@@ -8,6 +8,11 @@ import java.awt.*;
 import java.io.*;
 import java.util.Properties;
 
+/**
+ * @brief Класс-менеджер управления окнами приложения
+ * @details Управляет созданием, позиционированием и сохранением состояния окон,
+ * а также обработкой локализации и конфигурации приложения.
+ */
 public class WindowManager {
 
     private final JDesktopPane desktopPane;
@@ -17,12 +22,22 @@ public class WindowManager {
     private final LocalizationManager localizationManager;
     private static final String LOCALE_KEY = "locale";
 
+    /**
+     * @brief Конструктор менеджера окон
+     * @param desktopPane Панель для размещения внутренних окон
+     * @param robotModel Модель данных робота
+     * @details Инициализирует менеджер с заданной панелью и моделью
+     */
     public WindowManager(JDesktopPane desktopPane, RobotModel robotModel) {
         this.desktopPane = desktopPane;
         this.robotModel = robotModel;
         this.localizationManager = LocalizationManager.getInstance(this);
     }
 
+    /**
+     * @brief Инициализация окон приложения
+     * @details Создаёт и размещает основные окна (лог, игровое поле, координаты)
+     */
     public void initializeWindows() {
 
         desktopPane.removeAll();
@@ -45,6 +60,11 @@ public class WindowManager {
         }
     }
 
+    /**
+     * @brief Добавление окна на панель
+     * @param frame Окно для добавления
+     * @details Добавляет окно на панель и делает его видимым
+     */
     public void addWindow(JInternalFrame frame) {
 
         desktopPane.add(frame);
@@ -57,6 +77,11 @@ public class WindowManager {
         }
     }
 
+    /**
+     * @brief Сохранение состояния главного окна
+     * @param frame Главное окно приложения
+     * @details Сохраняет состояние окна (размер, позицию) и текущую локаль в файл конфигурации
+     */
     public void saveWindowState(JFrame frame) {
         Properties props = loadProperties();
         int state = frame.getExtendedState();
@@ -90,6 +115,11 @@ public class WindowManager {
         saveProperties(props);
     }
 
+    /**
+     * @brief Загрузка состояния главного окна
+     * @param frame Главное окно приложения
+     * @details Загружает сохранённое состояние окна из файла конфигурации
+     */
     public void loadWindowState(JFrame frame) {
         Properties props = loadProperties();
         File configFile = new File(CONFIG_PATH);
@@ -113,7 +143,6 @@ public class WindowManager {
             Logger.debug(localizationManager.getString("first.launch.maximized"));
             return;
         }
-
 
         try {
             int state = Integer.parseInt(props.getProperty("main.state", String.valueOf(Frame.MAXIMIZED_BOTH)));
@@ -152,8 +181,14 @@ public class WindowManager {
         }
     }
 
+    /**
+     * @brief Сохранение состояния внутреннего окна
+     * @param frame Внутреннее окно
+     * @param name Ключ для идентификации окна
+     * @param props Объект свойств для сохранения
+     * @details Сохраняет координаты, размер и состояние минимизации окна
+     */
     private void saveInternalFrameState(JInternalFrame frame, String name, Properties props) {
-
         props.setProperty(name + ".x", String.valueOf(frame.getX()));
         props.setProperty(name + ".y", String.valueOf(frame.getY()));
         props.setProperty(name + ".width", String.valueOf(frame.getWidth()));
@@ -161,9 +196,15 @@ public class WindowManager {
         props.setProperty(name + ".icon", String.valueOf(frame.isIcon()));
     }
 
+    /**
+     * @brief Загрузка состояния внутреннего окна
+     * @param frame Внутреннее окно
+     * @param name Ключ для идентификации окна
+     * @param props Объект свойств для загрузки
+     * @details Восстанавливает координаты, размер и состояние минимизации окна
+     */
     private void loadInternalFrameState(JInternalFrame frame, String name, Properties props) {
         try {
-
             int x = Integer.parseInt(props.getProperty(name + ".x", "50"));
             int y = Integer.parseInt(props.getProperty(name + ".y", "50"));
             int width = Integer.parseInt(props.getProperty(name + ".width", "300"));
@@ -177,8 +218,12 @@ public class WindowManager {
         }
     }
 
+    /**
+     * @brief Центрирование главного окна
+     * @param frame Главное окно приложения
+     * @details Располагает окно по центру экрана
+     */
     private void centerWindow(JFrame frame) {
-
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int x = (screenSize.width - frame.getWidth()) / 2;
         int y = (screenSize.height - frame.getHeight()) / 2;
@@ -186,8 +231,12 @@ public class WindowManager {
         Logger.debug(localizationManager.getString("centering.window") + ": x=" + x + ", y=" + y);
     }
 
+    /**
+     * @brief Загрузка свойств из файла конфигурации
+     * @return Объект Properties с загруженными данными
+     * @details Читает существующие настройки из файла, если он существует
+     */
     private Properties loadProperties() {
-
         Properties props = new Properties();
         File configFile = new File(CONFIG_PATH);
         if (configFile.exists()) {
@@ -200,8 +249,12 @@ public class WindowManager {
         return props;
     }
 
+    /**
+     * @brief Сохранение свойств в файл конфигурации
+     * @param props Объект свойств для сохранения
+     * @details Записывает свойства в файл с комментарием о конфигурации
+     */
     private void saveProperties(Properties props) {
-
         try {
             File configFile = new File(CONFIG_PATH);
             configFile.getParentFile().mkdirs();
@@ -214,22 +267,33 @@ public class WindowManager {
         }
     }
 
+    /**
+     * @brief Сохранение текущей локали
+     * @param language Код языка (например, "ru" или "en")
+     * @details Сохраняет выбранный язык в файл конфигурации
+     */
     public void saveLocale(String language) {
-
         Properties properties = loadProperties();
         properties.setProperty(LOCALE_KEY, language);
         saveProperties(properties);
     }
 
+    /**
+     * @brief Загрузка сохранённой локали
+     * @return Код языка или null, если локаль не найдена
+     * @details Читает сохранённый язык из файла конфигурации
+     */
     public String loadLocale() {
-
         Properties properties = loadProperties();
         String language = properties.getProperty(LOCALE_KEY);
         return language;
     }
 
+    /**
+     * @brief Завершение работы приложения
+     * @details Сохраняет состояние окон и закрывает все внутренние окна
+     */
     public void shutdown() {
-
         JFrame mainFrame = desktopPane.getTopLevelAncestor() instanceof JFrame ? (JFrame) desktopPane.getTopLevelAncestor() : null;
         if (mainFrame != null) {
             saveWindowState(mainFrame);
