@@ -11,13 +11,21 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Locale;
 
+/**
+ * @brief Главный класс приложения "Роботы"
+ * @details Запускает графический интерфейс и настраивает внешний вид приложения,
+ * включая создание окон, меню и обработку смены языка и закрытия.
+ */
 public class MainApplicationFrame extends JFrame {
     private final JDesktopPane desktopPane = new JDesktopPane();
     private final RobotModel robotModel = new RobotModel();
     private final WindowManager windowManager;
     private final LocalizationManager localizationManager;
 
-    // Создание окон
+    /**
+     * @brief Конструктор главного окна приложения
+     * @details Инициализирует компоненты интерфейса, создаёт окна и загружает сохранённое состояние
+     */
     public MainApplicationFrame() {
         Logger.debug("Test debug message");
         Logger.info("Test info message");
@@ -45,7 +53,11 @@ public class MainApplicationFrame extends JFrame {
         });
     }
 
-    // Генерация панели меню
+    /**
+     * @brief Генерация панели меню
+     * @return Объект JMenuBar с настроенными меню
+     * @details Создаёт и возвращает панель меню с подменю для стилей, тестов и файла
+     */
     private JMenuBar generateMenuBar() {
         JMenuBar menuBar = new JMenuBar();
         menuBar.add(createLookAndFeelMenu());
@@ -55,7 +67,11 @@ public class MainApplicationFrame extends JFrame {
         return menuBar;
     }
 
-    // Меню управления стилем отображения
+    /**
+     * @brief Создание меню управления стилем отображения
+     * @return Объект JMenu с пунктами стилей
+     * @details Настраивает меню с системным и кросс-платформенным стилями
+     */
     private JMenu createLookAndFeelMenu() {
         JMenu menu = new JMenu();
         menu.setMnemonic(KeyEvent.VK_V);
@@ -72,7 +88,11 @@ public class MainApplicationFrame extends JFrame {
         return menu;
     }
 
-    // Тестовое меню с командами
+    /**
+     * @brief Создание тестового меню с командами
+     * @return Объект JMenu с тестовыми пунктами
+     * @details Настраивает меню с командой для записи сообщения в лог
+     */
     private JMenu createTestMenu() {
         JMenu menu = new JMenu();
         menu.setMnemonic(KeyEvent.VK_T);
@@ -85,7 +105,14 @@ public class MainApplicationFrame extends JFrame {
         return menu;
     }
 
-    // Метод для создания пунктов меню
+    /**
+     * @brief Создание пункта меню
+     * @param translationKey Ключ для перевода текста пункта
+     * @param mnemonic Клавиша быстрого доступа
+     * @param action Действие, выполняемое при выборе пункта
+     * @return Объект JMenuItem с заданными параметрами
+     * @details Создаёт и настраивает пункт меню с переводом и обработчиком события
+     */
     private JMenuItem createMenuItem(String translationKey, int mnemonic, Runnable action) {
         JMenuItem item = new JMenuItem();
         item.setMnemonic(mnemonic);
@@ -95,7 +122,11 @@ public class MainApplicationFrame extends JFrame {
         return item;
     }
 
-    // Стиль отображения
+    /**
+     * @brief Установка стиля отображения
+     * @param className Имя класса стиля (например, системный или кросс-платформенный)
+     * @details Применяет выбранный стиль и обновляет интерфейс
+     */
     private void setLookAndFeel(String className) {
         try {
             UIManager.setLookAndFeel(className);
@@ -105,7 +136,11 @@ public class MainApplicationFrame extends JFrame {
         }
     }
 
-    // Метод выхода и смены языка
+    /**
+     * @brief Создание меню файла с управлением языком и выходом
+     * @return Объект JMenu с подменю языков и пунктом выхода
+     * @details Настраивает меню с выбором языка и обработкой выхода из приложения
+     */
     private JMenu createFileMenu() {
         JMenu menu = new JMenu();
         menu.setMnemonic(KeyEvent.VK_F);
@@ -145,6 +180,11 @@ public class MainApplicationFrame extends JFrame {
         return menu;
     }
 
+    /**
+     * @brief Смена языка интерфейса
+     * @param locale Новый языковой пакет (например, "ru" или "en")
+     * @details Обновляет локаль и перерисовывает интерфейс
+     */
     private void changeLocale(Locale locale) {
         localizationManager.setLocale(locale);
         localizationManager.updateUI(this);
@@ -153,7 +193,10 @@ public class MainApplicationFrame extends JFrame {
         }
     }
 
-    // Закрытие приложения
+    /**
+     * @brief Закрытие приложения
+     * @details Показывает диалог подтверждения и выполняет выход с сохранением состояния
+     */
     private void exitApplication() {
         UIManager.put("OptionPane.yesButtonText", localizationManager.getString("yes.button"));
         UIManager.put("OptionPane.noButtonText", localizationManager.getString("no.button"));
