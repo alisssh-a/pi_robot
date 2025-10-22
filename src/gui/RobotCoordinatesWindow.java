@@ -11,7 +11,9 @@ public class RobotCoordinatesWindow extends JInternalFrame implements Observer {
     private final LocalizationManager localizationManager;
 
     public RobotCoordinatesWindow(RobotModel model, WindowManager windowManager) {
+
         super("", true, true, true, true);
+
         localizationManager = LocalizationManager.getInstance(windowManager);
 
         putClientProperty("translationKey", "coordinates.window.title");
@@ -26,6 +28,7 @@ public class RobotCoordinatesWindow extends JInternalFrame implements Observer {
         update(null, null); // Инициализация текста
         localizationManager.updateUI(this);
     }
+
 
     @Override
     public void update(Observable o, Object arg) {
