@@ -14,7 +14,6 @@ public class GameVisualizer extends JPanel {
     public GameVisualizer(RobotModel model) {
         this.model = model;
         setDoubleBuffered(true);
-
         // Таймер перерисовки (30 FPS)
         repaintTimer = new Timer(30, e -> repaint());
         repaintTimer.start();
@@ -35,10 +34,8 @@ public class GameVisualizer extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D)g;
-
         // Отрисовка цели
         drawTarget(g2d);
-
         // Отрисовка робота
         drawRobot(g2d);
     }
