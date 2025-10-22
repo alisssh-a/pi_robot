@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import java.util.function.BiConsumer;
 
 public class LocalizationManager {
+
     private static LocalizationManager instance;
     private Locale currentLocale;
     private ResourceBundle messages;
@@ -34,11 +35,13 @@ public class LocalizationManager {
             component.revalidate();
             component.repaint();
         });
+
         translationActions.put(JMenuItem.class, (component, text) -> {
             ((JMenuItem) component).setText(text);
             component.revalidate();
             component.repaint();
         });
+
         translationActions.put(JInternalFrame.class, (component, text) -> {
             ((JInternalFrame) component).setTitle(text);
         });
@@ -52,6 +55,7 @@ public class LocalizationManager {
     }
 
     public void setLocale(Locale locale) {
+
         currentLocale = locale;
         messages = null; // Сбрасываем текущий ResourceBundle
         saveLocale(locale); // Сохраняем выбранную локаль
@@ -63,6 +67,7 @@ public class LocalizationManager {
 
     private void loadLocaleIfNeeded() {
         if (messages == null) {
+
             try {
                 messages = ResourceBundle.getBundle("messages", currentLocale);
             } catch (Exception e) {
@@ -74,6 +79,7 @@ public class LocalizationManager {
     }
 
     public String getString(String key) {
+
         loadLocaleIfNeeded();
         try {
             String value = messages.getString(key);
@@ -89,6 +95,7 @@ public class LocalizationManager {
     }
 
     private Locale loadSavedLocale() {
+
         String language = windowManager.loadLocale();
         if (language != null && !language.isEmpty()) {
             return new Locale(language);
